@@ -14,7 +14,7 @@
     "@lezer/cpp": "1.1.6",
     "@lezer/highlight": "1.2.5",
     "@noble/hashes": "2.4.0",
-    "three": "0.186.1",
+    "three": "0.187.0",
     "uplot": "1.6.32",
     "eecircuit-engine": "1.9.0"
   },
