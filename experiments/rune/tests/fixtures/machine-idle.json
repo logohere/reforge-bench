@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "tick": 0,
+  "source": "simulated",
+  "machine": {
+    "x_mm": 12.5,
+    "z_mm": -30.0,
+    "spindle_rpm": 0.0,
+    "program_state": "idle"
+  },
+  "instruments": [],
+  "warnings": []
+}

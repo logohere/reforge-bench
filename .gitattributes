@@ -1,0 +1,19 @@
+* text=auto eol=lf
+/.solidstate export-ignore
+/.codex export-ignore
+/.claude export-ignore
+/.ssh export-ignore
+/.aws export-ignore
+/local export-ignore
+/target export-ignore
+/dist export-ignore
+/node_modules export-ignore
+/.doghouse export-ignore
+/specs/**/*.dag export-ignore
+
+# Retained RTL receipts identify exact source bytes.
+/web/hardware/pulse_loop.v -text whitespace=cr-at-eol
+/web/hardware/pulse_loop_tb.v -text whitespace=cr-at-eol
+/web/hardware/pulse_experiment_tb.v -text whitespace=cr-at-eol
+
+/web/patches/*.patch whitespace=-space-before-tab

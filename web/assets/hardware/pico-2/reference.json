@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "source": "https://pip-assets.raspberrypi.com/categories/1005-raspberry-pi-pico-2/documents/RP-009061-CA-2-Pico%202%20-%203D%20STEP.zip",
+  "stepSha256": "d49ada10d893cfcb07cb4abced0a0a0cadca4c4150f153d874268ca06171a24f",
+  "meshSha256": "b8a8bc1e6a2ba3f0541c8d5043328a153bf8956e29419878a0fbeea27da4352a",
+  "meshes": 426,
+  "units": "mm",
+  "bounds": [
+    [
+      -10.5,
+      -25.5,
+      -0.075
+    ],
+    [
+      10.5,
+      26.8,
+      3.69
+    ]
+  ],
+  "converter": {
+    "package": "occt-import-js",
+    "version": "0.0.23",
+    "linearDeflectionMm": 0.06,
+    "angularDeflectionRadians": 0.15
+  },
+  "scope": "Official Pico 2 base-board CAD, not the with-headers assembly. Straight 2.54 mm header geometry is a separate simplified representation; actual header projection is not measured."
+}

@@ -1,0 +1,24 @@
+{
+  "timezone": "UTC",
+  "moments": [],
+  "lanes": [
+    {
+      "id": "app",
+      "label": "Application"
+    }
+  ],
+  "rea_lanes": [
+    {
+      "id": "acquire",
+      "label": "Acquire"
+    },
+    {
+      "id": "inspect",
+      "label": "Inspect"
+    },
+    {
+      "id": "measure",
+      "label": "Measure"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "hardware-rea-example",
+  "title": "Scope investigation and capture bridge",
+  "provenance": "recorded_summary",
+  "device_model": "Hantek DSO2D15",
+  "installed_environment": {
+    "architecture": "ARMv5",
+    "operating_system": "Linux",
+    "status": "observed_on_one_unit"
+  },
+  "workflow": [
+    "Inspect the software environment",
+    "Relate selected findings to the hardware bench",
+    "Transfer captures through the Rust bridge",
+    "Review recorded results and their limits"
+  ],
+  "display_observation": {
+    "temporary_custom_drawing": "observed",
+    "normal_display_return": "observed",
+    "persistent_firmware_modification": "not_demonstrated",
+    "rear_graphics_transport": "not_physically_qualified"
+  },
+  "reference_measurement_summary": {
+    "captures": 10,
+    "frequency_hz": {
+      "mean": 999.997334,
+      "sample_standard_deviation": 0.015479,
+      "minimum": 999.955002,
+      "maximum": 1000.013334
+    },
+    "clipped_captures": 0,
+    "voltage_conversion_validated": false,
+    "scope": "Repeatability across selected saved capture summaries; not absolute calibration"
+  },
+  "raw_artifacts_included": false,
+  "live_connection_required": false,
+  "firmware_execution_included": false,
+  "reproducible_from_this_bundle": false
+}

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Opt-in developer Unix socket; newline-delimited JSON, 16 KiB maximum request and 8192 UTF-8 bytes per expression. web.evaluate runs a synchronous JavaScript expression in the current embedded view. Normal app builds do not start this endpoint.",
+  "else": {
+    "not": {
+      "required": [
+        "expression"
+      ]
+    }
+  },
+  "if": {
+    "properties": {
+      "method": {
+        "const": "web.evaluate"
+      }
+    }
+  },
+  "properties": {
+    "expression": {
+      "maxLength": 8192,
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "id": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "method": {
+      "enum": [
+        "snapshot",
+        "diagnostics",
+        "web.snapshot",
+        "web.evaluate",
+        "web.inspector"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "method"
+  ],
+  "then": {
+    "required": [
+      "expression"
+    ]
+  },
+  "title": "Reforge live inspector request",
+  "type": "object"
+}

@@ -1,0 +1,5216 @@
+{
+  "version": "1.0",
+  "project": "scope-hardware-reference",
+  "nodes": [
+    {
+      "id": "part:cpu",
+      "label": "U36 \u00b7 F1C200S",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Allwinner (reference part family)",
+        "package": "89 numbered contacts including GND in source symbol; exact physical package unverified",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=2",
+      "confidence": "reference",
+      "description": "CPU / Linux / LCD / USB"
+    },
+    {
+      "id": "part:adc",
+      "label": "U38 \u00b7 ADC08D500",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Texas Instruments / National (reference family)",
+        "package": "128-pin HLQFP + exposed-pad reference; unit marking unverified",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=1",
+      "confidence": "reference",
+      "description": "Dual analog-to-digital converter"
+    },
+    {
+      "id": "part:clock",
+      "label": "Y2 \u00b7 24 MHz",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Not specified",
+        "package": "",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=2",
+      "confidence": "reference",
+      "description": "24 MHz oscillator"
+    },
+    {
+      "id": "part:clock-link",
+      "label": "R82 \u00b7 0 \u03a9",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Not specified",
+        "package": "",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=2",
+      "confidence": "reference",
+      "description": "Shared oscillator link"
+    },
+    {
+      "id": "part:eeprom",
+      "label": "U9 \u00b7 24C02",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Manufacturer not specified in source",
+        "package": "8-pin source symbol",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=2",
+      "confidence": "reference",
+      "description": "I\u00b2C calibration / settings reference"
+    },
+    {
+      "id": "part:fpga",
+      "label": "U7 \u00b7 GW2AR-18-144",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Gowin if reference marking matches; unit vendor unverified",
+        "package": "144-pin reference symbol; pin constraints NOT qualified for connected PCB",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=1",
+      "confidence": "reference",
+      "description": "Acquisition / timing / keypad logic"
+    },
+    {
+      "id": "part:front-usb",
+      "label": "J902 \u00b7 USB-A",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Connector vendor unknown",
+        "package": "Four USB-A contacts; standard pin numbering inferred because source J902 omits numerals",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=4",
+      "confidence": "reference",
+      "description": "Front USB-A / update probes"
+    },
+    {
+      "id": "part:j100",
+      "label": "J100 \u00b7 BNC",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Unknown",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=7",
+      "confidence": "reference",
+      "description": "CH1 input"
+    },
+    {
+      "id": "part:j200",
+      "label": "J200 \u00b7 BNC",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Unknown",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=8",
+      "confidence": "reference",
+      "description": "CH2 input"
+    },
+    {
+      "id": "part:j300",
+      "label": "J300 \u00b7 BNC",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Unknown",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=5",
+      "confidence": "reference",
+      "description": "AWG / trigger connector"
+    },
+    {
+      "id": "part:j905",
+      "label": "J905 \u00b7 POWER_TR",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Unknown",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=3",
+      "confidence": "reference",
+      "description": "Analog power input"
+    },
+    {
+      "id": "part:j906",
+      "label": "J906 \u00b7 POWER_TR",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Unknown",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=3",
+      "confidence": "reference",
+      "description": "Digital power input"
+    },
+    {
+      "id": "part:jtag",
+      "label": "PAD1 \u00b7 4 pads",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "PCB pads",
+        "package": "",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=1",
+      "confidence": "reference",
+      "description": "FPGA JTAG test pads"
+    },
+    {
+      "id": "part:nand",
+      "label": "U2 \u00b7 W25N01G",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Winbond (reference part family)",
+        "package": "8 + exposed-pad source symbol",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=2",
+      "confidence": "reference",
+      "description": "SPI NAND / installed partitions"
+    },
+    {
+      "id": "part:r29",
+      "label": "R29 \u00b7 22 \u03a9",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Not specified",
+        "package": "",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=4",
+      "confidence": "reference",
+      "description": "22 \u03a9 rear D\u2212"
+    },
+    {
+      "id": "part:r30",
+      "label": "R30 \u00b7 22 \u03a9",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Not specified",
+        "package": "",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=4",
+      "confidence": "reference",
+      "description": "22 \u03a9 rear D+"
+    },
+    {
+      "id": "part:r908",
+      "label": "R908 \u00b7 22 \u03a9",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Not specified",
+        "package": "",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=4",
+      "confidence": "reference",
+      "description": "22 \u03a9 front D\u2212"
+    },
+    {
+      "id": "part:r909",
+      "label": "R909 \u00b7 22 \u03a9",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Not specified",
+        "package": "",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=4",
+      "confidence": "reference",
+      "description": "22 \u03a9 front D+"
+    },
+    {
+      "id": "part:rear-usb",
+      "label": "J904 \u00b7 USB-B",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Connector vendor unknown",
+        "package": "",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=4",
+      "confidence": "reference",
+      "description": "Rear USB-B / PC control"
+    },
+    {
+      "id": "part:u1",
+      "label": "U1 \u00b7 MAX232",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Multiple vendors; not established",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=4",
+      "confidence": "reference",
+      "description": "Serial interface (not populated in reference)"
+    },
+    {
+      "id": "part:u10",
+      "label": "U10 \u00b7 AHC1G04",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Not specified",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=6",
+      "confidence": "reference",
+      "description": "Offset inverter"
+    },
+    {
+      "id": "part:u100",
+      "label": "U100 \u00b7 LT210",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Not established",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=7",
+      "confidence": "reference",
+      "description": "CH1 coupling component; identity unresolved"
+    },
+    {
+      "id": "part:u11",
+      "label": "U11 \u00b7 TLV272",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Texas Instruments",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=6",
+      "confidence": "reference",
+      "description": "Offset buffer"
+    },
+    {
+      "id": "part:u12",
+      "label": "U12 \u00b7 AMS1117-3.3",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Not specified",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=3",
+      "confidence": "reference",
+      "description": "Digital 3.3 V regulator"
+    },
+    {
+      "id": "part:u14",
+      "label": "U14 \u00b7 TLV62565",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Texas Instruments",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=3",
+      "confidence": "reference",
+      "description": "Digital 1.1 V regulator"
+    },
+    {
+      "id": "part:u15",
+      "label": "U15 \u00b7 HC595",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Not specified",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=6",
+      "confidence": "reference",
+      "description": "Channel control shift register"
+    },
+    {
+      "id": "part:u16",
+      "label": "U16 \u00b7 OPA197",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Texas Instruments",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=7",
+      "confidence": "reference",
+      "description": "CH1 offset amplifier"
+    },
+    {
+      "id": "part:u18",
+      "label": "U18 \u00b7 LMH6702MA",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Texas Instruments / National",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=5",
+      "confidence": "reference",
+      "description": "AWG output amplifier"
+    },
+    {
+      "id": "part:u20",
+      "label": "U20 \u00b7 TLV272",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Texas Instruments",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=6",
+      "confidence": "reference",
+      "description": "Offset buffer"
+    },
+    {
+      "id": "part:u200",
+      "label": "U200 \u00b7 LT210",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Not established",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=8",
+      "confidence": "reference",
+      "description": "CH2 coupling component; identity unresolved"
+    },
+    {
+      "id": "part:u201",
+      "label": "U201 \u00b7 OPA197",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Texas Instruments",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=8",
+      "confidence": "reference",
+      "description": "CH2 offset amplifier"
+    },
+    {
+      "id": "part:u22",
+      "label": "U22 \u00b7 TLV272",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Texas Instruments",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=6",
+      "confidence": "reference",
+      "description": "Channel control buffer"
+    },
+    {
+      "id": "part:u24",
+      "label": "U24 \u00b7 LMH6702MA",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Texas Instruments / National",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=7",
+      "confidence": "reference",
+      "description": "CH1 wideband amplifier"
+    },
+    {
+      "id": "part:u25",
+      "label": "U25 \u00b7 74HC4051D",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Multiple vendors; not established",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=7",
+      "confidence": "reference",
+      "description": "CH1 analog multiplexer"
+    },
+    {
+      "id": "part:u26",
+      "label": "U26 \u00b7 HC595",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Not specified",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=6",
+      "confidence": "reference",
+      "description": "Channel control shift register"
+    },
+    {
+      "id": "part:u27",
+      "label": "U27 \u00b7 LMH6702MA",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Texas Instruments / National",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=8",
+      "confidence": "reference",
+      "description": "CH2 wideband amplifier"
+    },
+    {
+      "id": "part:u28",
+      "label": "U28 \u00b7 74HC4051D",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Multiple vendors; not established",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=8",
+      "confidence": "reference",
+      "description": "CH2 analog multiplexer"
+    },
+    {
+      "id": "part:u3",
+      "label": "U3 \u00b7 SN74LVC1G17",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Texas Instruments family",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=3",
+      "confidence": "reference",
+      "description": "Power heartbeat buffer"
+    },
+    {
+      "id": "part:u30",
+      "label": "U30 \u00b7 TLV62565",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Texas Instruments",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=3",
+      "confidence": "reference",
+      "description": "Digital 1.9 V regulator"
+    },
+    {
+      "id": "part:u35",
+      "label": "U35 \u00b7 DAC902E",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Texas Instruments",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=5",
+      "confidence": "reference",
+      "description": "AWG digital-to-analog converter"
+    },
+    {
+      "id": "part:u4",
+      "label": "U4 \u00b7 AMS1117",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Not specified",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=3",
+      "confidence": "reference",
+      "description": "Digital 2.5 V regulator"
+    },
+    {
+      "id": "part:u401",
+      "label": "U401 \u00b7 LMH6551",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Texas Instruments / National",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=7",
+      "confidence": "reference",
+      "description": "CH1 differential ADC driver"
+    },
+    {
+      "id": "part:u402",
+      "label": "U402 \u00b7 LMH6551",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Texas Instruments / National",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=8",
+      "confidence": "reference",
+      "description": "CH2 differential ADC driver"
+    },
+    {
+      "id": "part:u5",
+      "label": "U5 \u00b7 REF3040",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Texas Instruments",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=6",
+      "confidence": "reference",
+      "description": "Reference voltage"
+    },
+    {
+      "id": "part:u6",
+      "label": "U6 \u00b7 AHC1G04",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Not specified",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=6",
+      "confidence": "reference",
+      "description": "Offset inverter"
+    },
+    {
+      "id": "part:u904",
+      "label": "U904 \u00b7 79D05",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Not specified",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=3",
+      "confidence": "reference",
+      "description": "Analog negative rail regulator"
+    },
+    {
+      "id": "part:u908",
+      "label": "U908 \u00b7 78D05",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Not specified",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=3",
+      "confidence": "reference",
+      "description": "Analog positive rail regulator"
+    },
+    {
+      "id": "part:ui",
+      "label": "J1 \u00b7 50-position FPC, 0.5 mm",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Connector vendor unknown",
+        "package": "50 positions, power/ground not exhaustively transcribed",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=4",
+      "confidence": "reference",
+      "description": "Display / front-panel connector"
+    },
+    {
+      "id": "part:x1",
+      "label": "X1 \u00b7 HFD4/4.5-S",
+      "kind": "hardware",
+      "properties": {
+        "manufacturer": "Hongfa reference series",
+        "package": "Not transcribed; source inventory, no invented footprint",
+        "status": "family-reference"
+      },
+      "source": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=5",
+      "confidence": "reference",
+      "description": "AWG relay"
+    },
+    {
+      "id": "net:USB_P",
+      "label": "USB_P",
+      "kind": "net",
+      "properties": {
+        "bus": "USB",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:USB_M",
+      "label": "USB_M",
+      "kind": "net",
+      "properties": {
+        "bus": "USB",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:USB_POWER_ON",
+      "label": "USB_POWER_ON",
+      "kind": "net",
+      "properties": {
+        "bus": "USB",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:USB_HOST_DETECT",
+      "label": "USB_HOST_DETECT",
+      "kind": "net",
+      "properties": {
+        "bus": "USB",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:MCU_FLASH_CLK",
+      "label": "MCU_FLASH_CLK",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:MCU_FLASH_CE",
+      "label": "MCU_FLASH_CE",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:MCU_FLASH_MISO",
+      "label": "MCU_FLASH_MISO",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:MCU_FLASH_MOSI",
+      "label": "MCU_FLASH_MOSI",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:I2C_SDA",
+      "label": "I2C_SDA",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:I2C_SCL",
+      "label": "I2C_SCL",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:LCD_CLK",
+      "label": "LCD_CLK",
+      "kind": "net",
+      "properties": {
+        "bus": "LCD",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:LCD_DE",
+      "label": "LCD_DE",
+      "kind": "net",
+      "properties": {
+        "bus": "LCD",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:TP_RESET",
+      "label": "TP_RESET",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:TP_INT",
+      "label": "TP_INT",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:LCD_BRIGHTNESS",
+      "label": "LCD_BRIGHTNESS",
+      "kind": "net",
+      "properties": {
+        "bus": "LCD",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:SERIAL_RX",
+      "label": "SERIAL_RX",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:SERIAL_TX",
+      "label": "SERIAL_TX",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:SERIAL_READY",
+      "label": "SERIAL_READY",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:FPGA_READY",
+      "label": "FPGA_READY",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:FPGA_RECONFIG",
+      "label": "FPGA_RECONFIG",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:FPGA_DONE",
+      "label": "FPGA_DONE",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:FPGA_SPI_CS",
+      "label": "FPGA_SPI_CS",
+      "kind": "net",
+      "properties": {
+        "bus": "FPGA SPI",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:FPGA_SPI_MOSI",
+      "label": "FPGA_SPI_MOSI",
+      "kind": "net",
+      "properties": {
+        "bus": "FPGA SPI",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:FPGA_SPI_CLK",
+      "label": "FPGA_SPI_CLK",
+      "kind": "net",
+      "properties": {
+        "bus": "FPGA SPI",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:FPGA_SPI_MISO",
+      "label": "FPGA_SPI_MISO",
+      "kind": "net",
+      "properties": {
+        "bus": "FPGA SPI",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:CPU_CLK_24MHZ",
+      "label": "CPU_CLK_24MHZ",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:LCD_D3",
+      "label": "LCD_D3",
+      "kind": "net",
+      "properties": {
+        "bus": "LCD",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:LCD_D4",
+      "label": "LCD_D4",
+      "kind": "net",
+      "properties": {
+        "bus": "LCD",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:LCD_D5",
+      "label": "LCD_D5",
+      "kind": "net",
+      "properties": {
+        "bus": "LCD",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:LCD_D6",
+      "label": "LCD_D6",
+      "kind": "net",
+      "properties": {
+        "bus": "LCD",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:LCD_D7",
+      "label": "LCD_D7",
+      "kind": "net",
+      "properties": {
+        "bus": "LCD",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:LCD_D10",
+      "label": "LCD_D10",
+      "kind": "net",
+      "properties": {
+        "bus": "LCD",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:LCD_D11",
+      "label": "LCD_D11",
+      "kind": "net",
+      "properties": {
+        "bus": "LCD",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:LCD_D12",
+      "label": "LCD_D12",
+      "kind": "net",
+      "properties": {
+        "bus": "LCD",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:LCD_D13",
+      "label": "LCD_D13",
+      "kind": "net",
+      "properties": {
+        "bus": "LCD",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:LCD_D14",
+      "label": "LCD_D14",
+      "kind": "net",
+      "properties": {
+        "bus": "LCD",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:LCD_D15",
+      "label": "LCD_D15",
+      "kind": "net",
+      "properties": {
+        "bus": "LCD",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:LCD_D19",
+      "label": "LCD_D19",
+      "kind": "net",
+      "properties": {
+        "bus": "LCD",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:LCD_D20",
+      "label": "LCD_D20",
+      "kind": "net",
+      "properties": {
+        "bus": "LCD",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:LCD_D21",
+      "label": "LCD_D21",
+      "kind": "net",
+      "properties": {
+        "bus": "LCD",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:LCD_D22",
+      "label": "LCD_D22",
+      "kind": "net",
+      "properties": {
+        "bus": "LCD",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:LCD_D23",
+      "label": "LCD_D23",
+      "kind": "net",
+      "properties": {
+        "bus": "LCD",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:TDO",
+      "label": "TDO",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:TDI",
+      "label": "TDI",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:TCK",
+      "label": "TCK",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:TMS",
+      "label": "TMS",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:KEY_SCAN_DATA",
+      "label": "KEY_SCAN_DATA",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:KEY_SCAN_RESET",
+      "label": "KEY_SCAN_RESET",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:KEY_SCAN_CLOCK",
+      "label": "KEY_SCAN_CLOCK",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:LED_CLOCK",
+      "label": "LED_CLOCK",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:LED_LOAD",
+      "label": "LED_LOAD",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:LED_DATA",
+      "label": "LED_DATA",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:K4_LED",
+      "label": "K4_LED",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:FPGA_CLK_24MHZ",
+      "label": "FPGA_CLK_24MHZ",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:EXT_TRIG",
+      "label": "EXT_TRIG",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:PROBE_CALIBRATION",
+      "label": "PROBE_CALIBRATION",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:CS_CLK",
+      "label": "CS_CLK",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:CS_LOAD",
+      "label": "CS_LOAD",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:CS_DATA",
+      "label": "CS_DATA",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:CHANNEL1_OFFSET_PWM",
+      "label": "CHANNEL1_OFFSET_PWM",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:CHANNEL2_OFFSET_PWM",
+      "label": "CHANNEL2_OFFSET_PWM",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:DAC_CLK",
+      "label": "DAC_CLK",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:DAC_D1",
+      "label": "DAC_D1",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:DAC_D2",
+      "label": "DAC_D2",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:DAC_D3",
+      "label": "DAC_D3",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:DAC_D4",
+      "label": "DAC_D4",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:DAC_D5",
+      "label": "DAC_D5",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:DAC_D6",
+      "label": "DAC_D6",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:DAC_D7",
+      "label": "DAC_D7",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:DAC_D8",
+      "label": "DAC_D8",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:DAC_D9",
+      "label": "DAC_D9",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:DAC_D10",
+      "label": "DAC_D10",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:DAC_D11",
+      "label": "DAC_D11",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:DAC_D12",
+      "label": "DAC_D12",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DI0_P",
+      "label": "ADC_DI0_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DI0_M",
+      "label": "ADC_DI0_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DI1_P",
+      "label": "ADC_DI1_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DI1_M",
+      "label": "ADC_DI1_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DI2_P",
+      "label": "ADC_DI2_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DI2_M",
+      "label": "ADC_DI2_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DI3_P",
+      "label": "ADC_DI3_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DI3_M",
+      "label": "ADC_DI3_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DI4_P",
+      "label": "ADC_DI4_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DI4_M",
+      "label": "ADC_DI4_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DI5_P",
+      "label": "ADC_DI5_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DI5_M",
+      "label": "ADC_DI5_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DI6_P",
+      "label": "ADC_DI6_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DI6_M",
+      "label": "ADC_DI6_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DI7_P",
+      "label": "ADC_DI7_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DI7_M",
+      "label": "ADC_DI7_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DID0_P",
+      "label": "ADC_DID0_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DID0_M",
+      "label": "ADC_DID0_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DID1_P",
+      "label": "ADC_DID1_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DID1_M",
+      "label": "ADC_DID1_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DID2_P",
+      "label": "ADC_DID2_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DID2_M",
+      "label": "ADC_DID2_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DID3_P",
+      "label": "ADC_DID3_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DID3_M",
+      "label": "ADC_DID3_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DID4_P",
+      "label": "ADC_DID4_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DID4_M",
+      "label": "ADC_DID4_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DID5_P",
+      "label": "ADC_DID5_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DID5_M",
+      "label": "ADC_DID5_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DID6_P",
+      "label": "ADC_DID6_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DID6_M",
+      "label": "ADC_DID6_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DID7_P",
+      "label": "ADC_DID7_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DID7_M",
+      "label": "ADC_DID7_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQ0_P",
+      "label": "ADC_DQ0_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQ0_M",
+      "label": "ADC_DQ0_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQ1_P",
+      "label": "ADC_DQ1_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQ1_M",
+      "label": "ADC_DQ1_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQ2_P",
+      "label": "ADC_DQ2_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQ2_M",
+      "label": "ADC_DQ2_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQ3_P",
+      "label": "ADC_DQ3_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQ3_M",
+      "label": "ADC_DQ3_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQ4_P",
+      "label": "ADC_DQ4_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQ4_M",
+      "label": "ADC_DQ4_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQ5_P",
+      "label": "ADC_DQ5_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQ5_M",
+      "label": "ADC_DQ5_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQ6_P",
+      "label": "ADC_DQ6_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQ6_M",
+      "label": "ADC_DQ6_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQ7_P",
+      "label": "ADC_DQ7_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQ7_M",
+      "label": "ADC_DQ7_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQD0_P",
+      "label": "ADC_DQD0_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQD0_M",
+      "label": "ADC_DQD0_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQD1_P",
+      "label": "ADC_DQD1_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQD1_M",
+      "label": "ADC_DQD1_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQD2_P",
+      "label": "ADC_DQD2_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQD2_M",
+      "label": "ADC_DQD2_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQD3_P",
+      "label": "ADC_DQD3_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQD3_M",
+      "label": "ADC_DQD3_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQD4_P",
+      "label": "ADC_DQD4_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQD4_M",
+      "label": "ADC_DQD4_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQD5_P",
+      "label": "ADC_DQD5_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQD5_M",
+      "label": "ADC_DQD5_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQD6_P",
+      "label": "ADC_DQD6_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQD6_M",
+      "label": "ADC_DQD6_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQD7_P",
+      "label": "ADC_DQD7_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DQD7_M",
+      "label": "ADC_DQD7_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DCLK_P",
+      "label": "ADC_DCLK_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_DCLK_M",
+      "label": "ADC_DCLK_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_OR_P",
+      "label": "ADC_OR_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_OR_M",
+      "label": "ADC_OR_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_CLK_P",
+      "label": "ADC_CLK_P",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:ADC_CLK_M",
+      "label": "ADC_CLK_M",
+      "kind": "net",
+      "properties": {
+        "bus": "ADC LVDS",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:CHANNEL1_IN_M",
+      "label": "CHANNEL1_IN_M",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:CHANNEL1_IN_P",
+      "label": "CHANNEL1_IN_P",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:CHANNEL2_IN_P",
+      "label": "CHANNEL2_IN_P",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:CHANNEL2_IN_M",
+      "label": "CHANNEL2_IN_M",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:REAR_VBUS",
+      "label": "REAR_VBUS",
+      "kind": "net",
+      "properties": {
+        "bus": "USB",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:REAR_DM",
+      "label": "REAR_DM",
+      "kind": "net",
+      "properties": {
+        "bus": "USB",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:REAR_DP",
+      "label": "REAR_DP",
+      "kind": "net",
+      "properties": {
+        "bus": "USB",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:GND",
+      "label": "GND",
+      "kind": "net",
+      "properties": {
+        "bus": "Other",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:FRONT_VBUS",
+      "label": "FRONT_VBUS",
+      "kind": "net",
+      "properties": {
+        "bus": "USB",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:FRONT_DM",
+      "label": "FRONT_DM",
+      "kind": "net",
+      "properties": {
+        "bus": "USB",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    },
+    {
+      "id": "net:FRONT_DP",
+      "label": "FRONT_DP",
+      "kind": "net",
+      "properties": {
+        "bus": "USB",
+        "status": "family-reference"
+      },
+      "confidence": "reference",
+      "description": "Reference net; not measured on a connected unit"
+    }
+  ],
+  "edges": [
+    {
+      "id": "cpu:69:USB_P",
+      "sourceId": "part:cpu",
+      "targetId": "net:USB_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "69"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "r30:1:USB_P",
+      "sourceId": "part:r30",
+      "targetId": "net:USB_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "1"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "r909:1:USB_P",
+      "sourceId": "part:r909",
+      "targetId": "net:USB_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "1"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:68:USB_M",
+      "sourceId": "part:cpu",
+      "targetId": "net:USB_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "68"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "r29:1:USB_M",
+      "sourceId": "part:r29",
+      "targetId": "net:USB_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "1"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "r908:1:USB_M",
+      "sourceId": "part:r908",
+      "targetId": "net:USB_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "1"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:65:USB_POWER_ON",
+      "sourceId": "part:cpu",
+      "targetId": "net:USB_POWER_ON",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "65"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:38:USB_HOST_DETECT",
+      "sourceId": "part:cpu",
+      "targetId": "net:USB_HOST_DETECT",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "38"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:59:MCU_FLASH_CLK",
+      "sourceId": "part:cpu",
+      "targetId": "net:MCU_FLASH_CLK",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "59"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "nand:6:MCU_FLASH_CLK",
+      "sourceId": "part:nand",
+      "targetId": "net:MCU_FLASH_CLK",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "6"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:60:MCU_FLASH_CE",
+      "sourceId": "part:cpu",
+      "targetId": "net:MCU_FLASH_CE",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "60"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "nand:1:MCU_FLASH_CE",
+      "sourceId": "part:nand",
+      "targetId": "net:MCU_FLASH_CE",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "1"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:61:MCU_FLASH_MISO",
+      "sourceId": "part:cpu",
+      "targetId": "net:MCU_FLASH_MISO",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "61"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "nand:2:MCU_FLASH_MISO",
+      "sourceId": "part:nand",
+      "targetId": "net:MCU_FLASH_MISO",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "2"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:62:MCU_FLASH_MOSI",
+      "sourceId": "part:cpu",
+      "targetId": "net:MCU_FLASH_MOSI",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "62"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "nand:5:MCU_FLASH_MOSI",
+      "sourceId": "part:nand",
+      "targetId": "net:MCU_FLASH_MOSI",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "5"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:6:I2C_SDA",
+      "sourceId": "part:cpu",
+      "targetId": "net:I2C_SDA",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "6"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "eeprom:5:I2C_SDA",
+      "sourceId": "part:eeprom",
+      "targetId": "net:I2C_SDA",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "5"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:118:I2C_SDA",
+      "sourceId": "part:fpga",
+      "targetId": "net:I2C_SDA",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "118"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:8:I2C_SDA",
+      "sourceId": "part:ui",
+      "targetId": "net:I2C_SDA",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "8"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:18:I2C_SCL",
+      "sourceId": "part:cpu",
+      "targetId": "net:I2C_SCL",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "18"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "eeprom:6:I2C_SCL",
+      "sourceId": "part:eeprom",
+      "targetId": "net:I2C_SCL",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "6"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:117:I2C_SCL",
+      "sourceId": "part:fpga",
+      "targetId": "net:I2C_SCL",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "117"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:9:I2C_SCL",
+      "sourceId": "part:ui",
+      "targetId": "net:I2C_SCL",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "9"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:26:LCD_CLK",
+      "sourceId": "part:cpu",
+      "targetId": "net:LCD_CLK",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "26"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:31:LCD_CLK",
+      "sourceId": "part:ui",
+      "targetId": "net:LCD_CLK",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "31"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:27:LCD_DE",
+      "sourceId": "part:cpu",
+      "targetId": "net:LCD_DE",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "27"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:29:LCD_DE",
+      "sourceId": "part:ui",
+      "targetId": "net:LCD_DE",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "29"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:28:TP_RESET",
+      "sourceId": "part:cpu",
+      "targetId": "net:TP_RESET",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "28"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:27:TP_RESET",
+      "sourceId": "part:ui",
+      "targetId": "net:TP_RESET",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "27"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:29:TP_INT",
+      "sourceId": "part:cpu",
+      "targetId": "net:TP_INT",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "29"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:26:TP_INT",
+      "sourceId": "part:ui",
+      "targetId": "net:TP_INT",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "26"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:37:LCD_BRIGHTNESS",
+      "sourceId": "part:cpu",
+      "targetId": "net:LCD_BRIGHTNESS",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "37"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:10:LCD_BRIGHTNESS",
+      "sourceId": "part:ui",
+      "targetId": "net:LCD_BRIGHTNESS",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "10"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:49:SERIAL_RX",
+      "sourceId": "part:cpu",
+      "targetId": "net:SERIAL_RX",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "49"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:48:SERIAL_TX",
+      "sourceId": "part:cpu",
+      "targetId": "net:SERIAL_TX",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "48"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:47:SERIAL_READY",
+      "sourceId": "part:cpu",
+      "targetId": "net:SERIAL_READY",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "47"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:45:FPGA_READY",
+      "sourceId": "part:cpu",
+      "targetId": "net:FPGA_READY",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "45"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:22:FPGA_READY",
+      "sourceId": "part:fpga",
+      "targetId": "net:FPGA_READY",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "22"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:44:FPGA_RECONFIG",
+      "sourceId": "part:cpu",
+      "targetId": "net:FPGA_RECONFIG",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "44"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:20:FPGA_RECONFIG",
+      "sourceId": "part:fpga",
+      "targetId": "net:FPGA_RECONFIG",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "20"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:43:FPGA_DONE",
+      "sourceId": "part:cpu",
+      "targetId": "net:FPGA_DONE",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "43"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:21:FPGA_DONE",
+      "sourceId": "part:fpga",
+      "targetId": "net:FPGA_DONE",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "21"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:42:FPGA_SPI_CS",
+      "sourceId": "part:cpu",
+      "targetId": "net:FPGA_SPI_CS",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "42"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:87:FPGA_SPI_CS",
+      "sourceId": "part:fpga",
+      "targetId": "net:FPGA_SPI_CS",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "87"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:41:FPGA_SPI_MOSI",
+      "sourceId": "part:cpu",
+      "targetId": "net:FPGA_SPI_MOSI",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "41"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:90:FPGA_SPI_MOSI",
+      "sourceId": "part:fpga",
+      "targetId": "net:FPGA_SPI_MOSI",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "90"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:40:FPGA_SPI_CLK",
+      "sourceId": "part:cpu",
+      "targetId": "net:FPGA_SPI_CLK",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "40"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:15:FPGA_SPI_CLK",
+      "sourceId": "part:fpga",
+      "targetId": "net:FPGA_SPI_CLK",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "15"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:39:FPGA_SPI_MISO",
+      "sourceId": "part:cpu",
+      "targetId": "net:FPGA_SPI_MISO",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "39"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:88:FPGA_SPI_MISO",
+      "sourceId": "part:fpga",
+      "targetId": "net:FPGA_SPI_MISO",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "88"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:51:CPU_CLK_24MHZ",
+      "sourceId": "part:cpu",
+      "targetId": "net:CPU_CLK_24MHZ",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "51"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "clock:3:CPU_CLK_24MHZ",
+      "sourceId": "part:clock",
+      "targetId": "net:CPU_CLK_24MHZ",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "3"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "clock-link:1:CPU_CLK_24MHZ",
+      "sourceId": "part:clock-link",
+      "targetId": "net:CPU_CLK_24MHZ",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "1"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:7:LCD_D3",
+      "sourceId": "part:cpu",
+      "targetId": "net:LCD_D3",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "7"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:50:LCD_D3",
+      "sourceId": "part:ui",
+      "targetId": "net:LCD_D3",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "50"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:8:LCD_D4",
+      "sourceId": "part:cpu",
+      "targetId": "net:LCD_D4",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "8"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:49:LCD_D4",
+      "sourceId": "part:ui",
+      "targetId": "net:LCD_D4",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "49"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:9:LCD_D5",
+      "sourceId": "part:cpu",
+      "targetId": "net:LCD_D5",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "9"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:48:LCD_D5",
+      "sourceId": "part:ui",
+      "targetId": "net:LCD_D5",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "48"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:10:LCD_D6",
+      "sourceId": "part:cpu",
+      "targetId": "net:LCD_D6",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "10"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:47:LCD_D6",
+      "sourceId": "part:ui",
+      "targetId": "net:LCD_D6",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "47"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:11:LCD_D7",
+      "sourceId": "part:cpu",
+      "targetId": "net:LCD_D7",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "11"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:46:LCD_D7",
+      "sourceId": "part:ui",
+      "targetId": "net:LCD_D7",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "46"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:12:LCD_D10",
+      "sourceId": "part:cpu",
+      "targetId": "net:LCD_D10",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "12"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:44:LCD_D10",
+      "sourceId": "part:ui",
+      "targetId": "net:LCD_D10",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "44"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:13:LCD_D11",
+      "sourceId": "part:cpu",
+      "targetId": "net:LCD_D11",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "13"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:43:LCD_D11",
+      "sourceId": "part:ui",
+      "targetId": "net:LCD_D11",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "43"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:14:LCD_D12",
+      "sourceId": "part:cpu",
+      "targetId": "net:LCD_D12",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "14"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:42:LCD_D12",
+      "sourceId": "part:ui",
+      "targetId": "net:LCD_D12",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "42"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:15:LCD_D13",
+      "sourceId": "part:cpu",
+      "targetId": "net:LCD_D13",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "15"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:41:LCD_D13",
+      "sourceId": "part:ui",
+      "targetId": "net:LCD_D13",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "41"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:16:LCD_D14",
+      "sourceId": "part:cpu",
+      "targetId": "net:LCD_D14",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "16"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:40:LCD_D14",
+      "sourceId": "part:ui",
+      "targetId": "net:LCD_D14",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "40"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:17:LCD_D15",
+      "sourceId": "part:cpu",
+      "targetId": "net:LCD_D15",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "17"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:39:LCD_D15",
+      "sourceId": "part:ui",
+      "targetId": "net:LCD_D15",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "39"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:19:LCD_D19",
+      "sourceId": "part:cpu",
+      "targetId": "net:LCD_D19",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "19"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:37:LCD_D19",
+      "sourceId": "part:ui",
+      "targetId": "net:LCD_D19",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "37"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:21:LCD_D20",
+      "sourceId": "part:cpu",
+      "targetId": "net:LCD_D20",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "21"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:36:LCD_D20",
+      "sourceId": "part:ui",
+      "targetId": "net:LCD_D20",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "36"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:23:LCD_D21",
+      "sourceId": "part:cpu",
+      "targetId": "net:LCD_D21",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "23"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:35:LCD_D21",
+      "sourceId": "part:ui",
+      "targetId": "net:LCD_D21",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "35"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:24:LCD_D22",
+      "sourceId": "part:cpu",
+      "targetId": "net:LCD_D22",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "24"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:34:LCD_D22",
+      "sourceId": "part:ui",
+      "targetId": "net:LCD_D22",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "34"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "cpu:25:LCD_D23",
+      "sourceId": "part:cpu",
+      "targetId": "net:LCD_D23",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "25"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:33:LCD_D23",
+      "sourceId": "part:ui",
+      "targetId": "net:LCD_D23",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "33"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:18:TDO",
+      "sourceId": "part:fpga",
+      "targetId": "net:TDO",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "18"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "jtag:1:TDO",
+      "sourceId": "part:jtag",
+      "targetId": "net:TDO",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "1"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:16:TDI",
+      "sourceId": "part:fpga",
+      "targetId": "net:TDI",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "16"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "jtag:2:TDI",
+      "sourceId": "part:jtag",
+      "targetId": "net:TDI",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "2"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:14:TCK",
+      "sourceId": "part:fpga",
+      "targetId": "net:TCK",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "14"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "jtag:3:TCK",
+      "sourceId": "part:jtag",
+      "targetId": "net:TCK",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "3"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:13:TMS",
+      "sourceId": "part:fpga",
+      "targetId": "net:TMS",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "13"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "jtag:4:TMS",
+      "sourceId": "part:jtag",
+      "targetId": "net:TMS",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "4"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:126:KEY_SCAN_DATA",
+      "sourceId": "part:fpga",
+      "targetId": "net:KEY_SCAN_DATA",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "126"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:1:KEY_SCAN_DATA",
+      "sourceId": "part:ui",
+      "targetId": "net:KEY_SCAN_DATA",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "1"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:125:KEY_SCAN_RESET",
+      "sourceId": "part:fpga",
+      "targetId": "net:KEY_SCAN_RESET",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "125"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:2:KEY_SCAN_RESET",
+      "sourceId": "part:ui",
+      "targetId": "net:KEY_SCAN_RESET",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "2"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:124:KEY_SCAN_CLOCK",
+      "sourceId": "part:fpga",
+      "targetId": "net:KEY_SCAN_CLOCK",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "124"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:3:KEY_SCAN_CLOCK",
+      "sourceId": "part:ui",
+      "targetId": "net:KEY_SCAN_CLOCK",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "3"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:122:LED_CLOCK",
+      "sourceId": "part:fpga",
+      "targetId": "net:LED_CLOCK",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "122"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:4:LED_CLOCK",
+      "sourceId": "part:ui",
+      "targetId": "net:LED_CLOCK",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "4"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:121:LED_LOAD",
+      "sourceId": "part:fpga",
+      "targetId": "net:LED_LOAD",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "121"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:5:LED_LOAD",
+      "sourceId": "part:ui",
+      "targetId": "net:LED_LOAD",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "5"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:120:LED_DATA",
+      "sourceId": "part:fpga",
+      "targetId": "net:LED_DATA",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "120"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:6:LED_DATA",
+      "sourceId": "part:ui",
+      "targetId": "net:LED_DATA",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "6"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:119:K4_LED",
+      "sourceId": "part:fpga",
+      "targetId": "net:K4_LED",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "119"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "ui:7:K4_LED",
+      "sourceId": "part:ui",
+      "targetId": "net:K4_LED",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "7"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:123:FPGA_CLK_24MHZ",
+      "sourceId": "part:fpga",
+      "targetId": "net:FPGA_CLK_24MHZ",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "123"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "clock-link:2:FPGA_CLK_24MHZ",
+      "sourceId": "part:clock-link",
+      "targetId": "net:FPGA_CLK_24MHZ",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "2"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:116:EXT_TRIG",
+      "sourceId": "part:fpga",
+      "targetId": "net:EXT_TRIG",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "116"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:115:PROBE_CALIBRATION",
+      "sourceId": "part:fpga",
+      "targetId": "net:PROBE_CALIBRATION",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "115"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:114:CS_CLK",
+      "sourceId": "part:fpga",
+      "targetId": "net:CS_CLK",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "114"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:113:CS_LOAD",
+      "sourceId": "part:fpga",
+      "targetId": "net:CS_LOAD",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "113"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:112:CS_DATA",
+      "sourceId": "part:fpga",
+      "targetId": "net:CS_DATA",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "112"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:110:CHANNEL1_OFFSET_PWM",
+      "sourceId": "part:fpga",
+      "targetId": "net:CHANNEL1_OFFSET_PWM",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "110"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:111:CHANNEL2_OFFSET_PWM",
+      "sourceId": "part:fpga",
+      "targetId": "net:CHANNEL2_OFFSET_PWM",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "111"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:141:DAC_CLK",
+      "sourceId": "part:fpga",
+      "targetId": "net:DAC_CLK",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "141"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:140:DAC_D1",
+      "sourceId": "part:fpga",
+      "targetId": "net:DAC_D1",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "140"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:139:DAC_D2",
+      "sourceId": "part:fpga",
+      "targetId": "net:DAC_D2",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "139"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:138:DAC_D3",
+      "sourceId": "part:fpga",
+      "targetId": "net:DAC_D3",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "138"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:137:DAC_D4",
+      "sourceId": "part:fpga",
+      "targetId": "net:DAC_D4",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "137"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:136:DAC_D5",
+      "sourceId": "part:fpga",
+      "targetId": "net:DAC_D5",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "136"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:135:DAC_D6",
+      "sourceId": "part:fpga",
+      "targetId": "net:DAC_D6",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "135"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:134:DAC_D7",
+      "sourceId": "part:fpga",
+      "targetId": "net:DAC_D7",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "134"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:133:DAC_D8",
+      "sourceId": "part:fpga",
+      "targetId": "net:DAC_D8",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "133"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:132:DAC_D9",
+      "sourceId": "part:fpga",
+      "targetId": "net:DAC_D9",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "132"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:131:DAC_D10",
+      "sourceId": "part:fpga",
+      "targetId": "net:DAC_D10",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "131"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:130:DAC_D11",
+      "sourceId": "part:fpga",
+      "targetId": "net:DAC_D11",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "130"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:129:DAC_D12",
+      "sourceId": "part:fpga",
+      "targetId": "net:DAC_D12",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "129"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:32:ADC_DI0_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DI0_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "32"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:102:ADC_DI0_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DI0_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "102"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:33:ADC_DI0_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DI0_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "33"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:101:ADC_DI0_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DI0_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "101"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:34:ADC_DI1_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DI1_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "34"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:100:ADC_DI1_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DI1_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "100"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:35:ADC_DI1_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DI1_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "35"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:99:ADC_DI1_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DI1_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "99"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:38:ADC_DI2_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DI2_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "38"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:96:ADC_DI2_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DI2_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "96"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:39:ADC_DI2_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DI2_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "39"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:95:ADC_DI2_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DI2_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "95"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:40:ADC_DI3_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DI3_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "40"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:94:ADC_DI3_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DI3_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "94"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:41:ADC_DI3_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DI3_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "41"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:93:ADC_DI3_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DI3_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "93"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:42:ADC_DI4_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DI4_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "42"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:92:ADC_DI4_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DI4_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "92"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:43:ADC_DI4_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DI4_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "43"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:91:ADC_DI4_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DI4_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "91"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:44:ADC_DI5_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DI5_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "44"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:90:ADC_DI5_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DI5_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "90"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:45:ADC_DI5_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DI5_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "45"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:89:ADC_DI5_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DI5_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "89"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:46:ADC_DI6_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DI6_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "46"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:86:ADC_DI6_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DI6_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "86"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:47:ADC_DI6_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DI6_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "47"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:85:ADC_DI6_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DI6_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "85"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:48:ADC_DI7_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DI7_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "48"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:84:ADC_DI7_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DI7_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "84"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:49:ADC_DI7_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DI7_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "49"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:83:ADC_DI7_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DI7_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "83"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:3:ADC_DID0_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DID0_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "3"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:125:ADC_DID0_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DID0_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "125"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:4:ADC_DID0_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DID0_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "4"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:124:ADC_DID0_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DID0_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "124"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:6:ADC_DID1_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DID1_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "6"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:123:ADC_DID1_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DID1_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "123"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:7:ADC_DID1_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DID1_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "7"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:122:ADC_DID1_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DID1_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "122"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:9:ADC_DID2_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DID2_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "9"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:118:ADC_DID2_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DID2_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "118"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:10:ADC_DID2_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DID2_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "10"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:117:ADC_DID2_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DID2_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "117"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:11:ADC_DID3_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DID3_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "11"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:116:ADC_DID3_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DID3_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "116"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:12:ADC_DID3_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DID3_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "12"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:115:ADC_DID3_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DID3_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "115"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:23:ADC_DID4_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DID4_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "23"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:114:ADC_DID4_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DID4_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "114"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:24:ADC_DID4_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DID4_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "24"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:113:ADC_DID4_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DID4_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "113"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:25:ADC_DID5_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DID5_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "25"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:112:ADC_DID5_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DID5_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "112"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:26:ADC_DID5_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DID5_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "26"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:111:ADC_DID5_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DID5_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "111"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:27:ADC_DID6_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DID6_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "27"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:106:ADC_DID6_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DID6_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "106"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:28:ADC_DID6_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DID6_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "28"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:105:ADC_DID6_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DID6_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "105"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:29:ADC_DID7_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DID7_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "29"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:104:ADC_DID7_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DID7_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "104"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:30:ADC_DID7_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DID7_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "30"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:103:ADC_DID7_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DID7_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "103"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:71:ADC_DQ0_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQ0_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "71"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:58:ADC_DQ0_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQ0_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "58"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:70:ADC_DQ0_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQ0_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "70"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:59:ADC_DQ0_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQ0_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "59"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:69:ADC_DQ1_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQ1_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "69"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:60:ADC_DQ1_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQ1_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "60"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:68:ADC_DQ1_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQ1_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "68"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:61:ADC_DQ1_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQ1_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "61"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:67:ADC_DQ2_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQ2_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "67"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:65:ADC_DQ2_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQ2_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "65"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:66:ADC_DQ2_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQ2_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "66"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:66:ADC_DQ2_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQ2_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "66"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:65:ADC_DQ3_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQ3_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "65"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:67:ADC_DQ3_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQ3_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "67"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:64:ADC_DQ3_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQ3_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "64"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:68:ADC_DQ3_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQ3_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "68"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:63:ADC_DQ4_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQ4_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "63"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:69:ADC_DQ4_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQ4_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "69"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:62:ADC_DQ4_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQ4_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "62"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:70:ADC_DQ4_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQ4_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "70"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:61:ADC_DQ5_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQ5_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "61"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:71:ADC_DQ5_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQ5_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "71"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:60:ADC_DQ5_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQ5_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "60"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:72:ADC_DQ5_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQ5_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "72"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:59:ADC_DQ6_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQ6_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "59"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:75:ADC_DQ6_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQ6_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "75"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:58:ADC_DQ6_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQ6_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "58"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:76:ADC_DQ6_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQ6_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "76"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:57:ADC_DQ7_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQ7_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "57"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:77:ADC_DQ7_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQ7_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "77"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:56:ADC_DQ7_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQ7_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "56"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:78:ADC_DQ7_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQ7_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "78"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:102:ADC_DQD0_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQD0_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "102"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:36:ADC_DQD0_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQD0_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "36"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:101:ADC_DQD0_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQD0_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "101"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:37:ADC_DQD0_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQD0_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "37"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:100:ADC_DQD1_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQD1_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "100"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:38:ADC_DQD1_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQD1_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "38"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:99:ADC_DQD1_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQD1_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "99"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:39:ADC_DQD1_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQD1_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "39"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:98:ADC_DQD2_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQD2_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "98"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:43:ADC_DQD2_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQD2_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "43"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:97:ADC_DQD2_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQD2_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "97"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:44:ADC_DQD2_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQD2_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "44"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:96:ADC_DQD3_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQD3_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "96"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:45:ADC_DQD3_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQD3_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "45"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:95:ADC_DQD3_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQD3_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "95"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:46:ADC_DQD3_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQD3_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "46"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:94:ADC_DQD4_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQD4_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "94"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:47:ADC_DQD4_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQD4_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "47"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:93:ADC_DQD4_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQD4_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "93"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:48:ADC_DQD4_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQD4_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "48"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:84:ADC_DQD5_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQD5_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "84"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:49:ADC_DQD5_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQD5_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "49"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:83:ADC_DQD5_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQD5_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "83"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:50:ADC_DQD5_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQD5_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "50"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:80:ADC_DQD6_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQD6_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "80"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:54:ADC_DQD6_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQD6_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "54"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:79:ADC_DQD6_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQD6_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "79"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:55:ADC_DQD6_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQD6_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "55"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:78:ADC_DQD7_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQD7_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "78"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:56:ADC_DQD7_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQD7_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "56"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:76:ADC_DQD7_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DQD7_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "76"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:57:ADC_DQD7_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DQD7_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "57"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:50:ADC_DCLK_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DCLK_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "50"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:82:ADC_DCLK_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DCLK_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "82"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:51:ADC_DCLK_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_DCLK_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "51"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:81:ADC_DCLK_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_DCLK_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "81"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:54:ADC_OR_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_OR_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "54"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:79:ADC_OR_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_OR_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "79"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:52:ADC_OR_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_OR_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "52"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:80:ADC_OR_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_OR_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "80"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:106:ADC_CLK_P",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_CLK_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "106"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:18:ADC_CLK_P",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_CLK_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "18"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "fpga:105:ADC_CLK_M",
+      "sourceId": "part:fpga",
+      "targetId": "net:ADC_CLK_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "105"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:19:ADC_CLK_M",
+      "sourceId": "part:adc",
+      "targetId": "net:ADC_CLK_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "19"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:10:CHANNEL1_IN_M",
+      "sourceId": "part:adc",
+      "targetId": "net:CHANNEL1_IN_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "10"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:11:CHANNEL1_IN_P",
+      "sourceId": "part:adc",
+      "targetId": "net:CHANNEL1_IN_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "11"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:22:CHANNEL2_IN_P",
+      "sourceId": "part:adc",
+      "targetId": "net:CHANNEL2_IN_P",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "22"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "adc:23:CHANNEL2_IN_M",
+      "sourceId": "part:adc",
+      "targetId": "net:CHANNEL2_IN_M",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "23"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "rear-usb:1:REAR_VBUS",
+      "sourceId": "part:rear-usb",
+      "targetId": "net:REAR_VBUS",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "1"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "rear-usb:2:REAR_DM",
+      "sourceId": "part:rear-usb",
+      "targetId": "net:REAR_DM",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "2"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "r29:2:REAR_DM",
+      "sourceId": "part:r29",
+      "targetId": "net:REAR_DM",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "2"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "rear-usb:3:REAR_DP",
+      "sourceId": "part:rear-usb",
+      "targetId": "net:REAR_DP",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "3"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "r30:2:REAR_DP",
+      "sourceId": "part:r30",
+      "targetId": "net:REAR_DP",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "2"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "rear-usb:4:GND",
+      "sourceId": "part:rear-usb",
+      "targetId": "net:GND",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "4"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "front-usb:4:GND",
+      "sourceId": "part:front-usb",
+      "targetId": "net:GND",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "4"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "front-usb:1:FRONT_VBUS",
+      "sourceId": "part:front-usb",
+      "targetId": "net:FRONT_VBUS",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "1"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "front-usb:2:FRONT_DM",
+      "sourceId": "part:front-usb",
+      "targetId": "net:FRONT_DM",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "2"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "r908:2:FRONT_DM",
+      "sourceId": "part:r908",
+      "targetId": "net:FRONT_DM",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "2"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "front-usb:3:FRONT_DP",
+      "sourceId": "part:front-usb",
+      "targetId": "net:FRONT_DP",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "3"
+      },
+      "confidence": "reference"
+    },
+    {
+      "id": "r909:2:FRONT_DP",
+      "sourceId": "part:r909",
+      "targetId": "net:FRONT_DP",
+      "verb": "connected_to",
+      "properties": {
+        "pin": "2"
+      },
+      "confidence": "reference"
+    }
+  ],
+  "compiled": false,
+  "limitations": [
+    "Family reference pin facts, not a measured unit or recovered firmware execution graph.",
+    "Logical relationships are not PCB geometry or qualified voltage/timing.",
+    "No private analysis records or proprietary firmware are included."
+  ]
+}

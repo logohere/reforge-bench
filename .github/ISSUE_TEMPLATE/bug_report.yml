@@ -1,0 +1,24 @@
+name: Bug report
+description: Report a reproducible problem without private data.
+body:
+  - type: markdown
+    attributes:
+      value: Do not attach firmware, raw captures, credentials, serial numbers or unreviewed logs. Use SECURITY.md for sensitive reports.
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps, expected behavior and observed behavior
+      description: Use a minimal example that you have permission to share.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Relevant environment
+      description: OS/tool versions only; omit machine names, accounts and network addresses.

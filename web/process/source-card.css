@@ -1,0 +1,6 @@
+@import url('/ui/source-code.css');
+.source-card{min-width:0;margin-bottom:var(--rb-space-6);background:var(--rb-color-field);border-radius:var(--rb-radius-panel);overflow:hidden}
+.source-card-heading{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:var(--rb-space-3) var(--rb-space-5);padding:var(--rb-space-5);border-bottom:1px solid var(--rb-color-divider);font-size:var(--rb-text-body);font-weight:500;overflow-wrap:anywhere}
+.source-card-heading>span:last-child{font-size:var(--rb-text-secondary);font-weight:400;color:var(--rb-color-secondary)}
+.code-lines{padding:var(--rb-space-5) var(--rb-space-5) var(--rb-space-5) 56px;margin:0;font:var(--rb-text-secondary)/1.7 var(--rb-font-code);color:var(--rb-color-text);counter-reset:source-line var(--line-start,0)}
+.code-lines li{position:relative;list-style:none;white-space:pre-wrap;overflow-wrap:anywhere;min-height:1.7em;padding-left:var(--rb-space-4);counter-increment:source-line}.code-lines li::before{content:counter(source-line);position:absolute;right:calc(100% + var(--rb-space-3));width:36px;text-align:right;font-size:var(--rb-text-caption);color:var(--rb-color-tertiary)}.code-lines li.highlight{box-shadow:inset 2px 0 var(--rb-color-selection-edge)}

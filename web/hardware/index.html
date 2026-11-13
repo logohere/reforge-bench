@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="icon" href="/assets/brand/rea-app.png" type="image/png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reforge — Hardware bench</title>
+  <link rel="stylesheet" href="/workspace.css">
+  <link rel="stylesheet" href="/hardware/hardware.css">
+  <link rel="stylesheet" href="/dist/plots.css">
+</head>
+<body data-workspace="hardware">
+  <header></header>
+  <main class="hardware-workspace">
+    <div id="hardware-tabs"></div>
+    <section id="cora" class="hardware-3d-page" hidden></section>
+    <section id="bench" class="hardware-3d-page"></section>
+    <section id="experiment" class="hardware-3d-page" hidden></section>
+    <section id="equipment" class="hardware-equipment-page" hidden></section>
+    <section id="connections" class="hardware-connections" hidden>
+      <div class="hardware-region-heading"><h2>Pulse-loop demonstration</h2><span>Example · Cora 07S Rev. B</span></div>
+      <div class="hardware-map"></div>
+      <table class="hardware-net-table"><caption>Pulse loop · boards powered separately by their own supported supplies</caption><thead><tr><th>Net</th><th>Connection</th><th>Observe</th></tr></thead><tbody><tr><th>Pulse</th><td>Pico GP2 / pin 4 → TPH2 pin 1 → Cora JA1 / Y18</td><td>Scope CH1 · analyzer CH0</td></tr><tr><th>Response</th><td>Cora JA2 / Y19 → TPH2 pin 2</td><td>Analyzer CH1 · scope CH2 unused</td></tr><tr><th>Ground</th><td>Pico GND / pin 3 ↔ TPH2 GND / pin 5 ↔ instrument grounds</td><td>One common reference</td></tr></tbody></table>
+      <p class="hardware-connection-note">3.3 V logic only. Do not join the boards’ 3.3 V outputs or connect the kit’s 5 V rail to Pmod signals. Pin numbers follow connector markings, not photo orientation. <a href="/hardware/pulse-loop.md" download>Setup guide (.md)</a></p>
+    </section>
+    <section id="procedure" class="hardware-procedure-page" hidden></section>
+    <section id="captures" class="hardware-3d-page" hidden>
+      <div class="hardware-capture-import">
+        <h2>Captures</h2>
+        <p>Import a waveform from your acquisition tool. Originals stay on your computer.</p>
+        <label class="hardware-file">Import waveform<input id="capture-file" type="file" aria-describedby="capture-status"></label>
+        <p id="capture-status" role="status">No capture attached.</p>
+        <div id="capture-record"></div><div id="capture-actions"></div>
+        <details><summary>Formats &amp; provenance</summary><p>Seconds/volts CSV, supported SCPI CSV/TSV, or the example’s simulation JSON. Other formats retain their hash only. Keep the original file, instrument settings, pin map and program version. A replay is not a live measurement.</p></details>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="/dist/workspace-router.js" data-workspace-entry="/dist/hardware.js"></script>
+</body>
+</html>

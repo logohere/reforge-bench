@@ -1,0 +1,17 @@
+[package]
+name = "reforge-bench-desktop"
+version.workspace = true
+edition = "2024"
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+publish = false
+
+[features]
+agent-debug = ["rea-rune-ui/agent-debug"]
+
+[dependencies]
+rea-rune-ui.workspace = true
+
+[lints]
+workspace = true

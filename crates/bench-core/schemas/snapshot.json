@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Bench snapshot",
+  "type": "object",
+  "required": ["schema_version", "tick", "source", "machine", "instruments", "warnings"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "tick": {"type": "integer", "minimum": 0, "maximum": 18446744073709551615},
+    "source": {"enum": ["simulated", "recorded", "live"]},
+    "machine": {
+      "type": "object",
+      "required": ["program_state"],
+      "properties": {
+        "x_mm": {"type": ["number", "null"]},
+        "z_mm": {"type": ["number", "null"]},
+        "spindle_rpm": {"type": ["number", "null"], "minimum": 0},
+        "program_state": {"type": "string"}
+      }
+    },
+    "instruments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["device_id", "stale"],
+        "properties": {
+          "device_id": {"type": "string"},
+          "captured_at_ms": {"type": ["integer", "null"], "minimum": 0, "maximum": 18446744073709551615},
+          "stale": {"type": "boolean"},
+          "units": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "warnings": {"type": "array", "items": {"type": "string"}}
+  },
+  "description": "Additional fields are ignored for compatibility. A live source label does not authenticate a device or establish freshness."
+}

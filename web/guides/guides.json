@@ -1,0 +1,79 @@
+{
+  "scope": "Local bench guide",
+  "topics": [
+    {
+      "id": "start",
+      "group": "Bench",
+      "title": "Start with the example",
+      "summary": "Inspect the recorded scope summary, then explore the hardware bench.",
+      "sections": [
+        {
+          "id": "flow",
+          "title": "Workflow",
+          "flow": [
+            "Library",
+            "REA Tool",
+            "Hardware",
+            "Capture controls",
+            "Diagnostics"
+          ],
+          "paragraphs": [
+            "The example contains recorded summary measurements, not raw captures or bundled firmware. Device models and wiring references remain available without connecting hardware."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hardware",
+      "group": "Hardware",
+      "title": "Your hardware",
+      "summary": "Use the 2D plan and 3D bench to inspect devices, pins and signal paths.",
+      "sections": [
+        {
+          "id": "connect",
+          "title": "Acquisition",
+          "paragraphs": [
+            "Configure your own capture adapter and transport. Reforge includes no remote account, SSH key or private machine binding. Unknown readings remain unknown; disconnected instruments do not generate signals."
+          ],
+          "cards": [
+            {
+              "title": "Open hardware",
+              "description": "Inspect the bench and wiring",
+              "href": "/hardware/#bench"
+            },
+            {
+              "title": "Import a waveform",
+              "description": "Parse CSV, TSV or supported saved traces",
+              "href": "/hardware/#captures"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "diagnostics",
+      "group": "Development",
+      "title": "Diagnostics and schemas",
+      "summary": "Inspect native errors, client failures and app state locally.",
+      "sections": [
+        {
+          "id": "inspect",
+          "title": "Local inspection",
+          "paragraphs": [
+            "Tools \u2192 Diagnostics shows local failures and exports a metadata-only report. Developer builds can enable the native inspector and WebKit developer tools. The agent inspector is disabled in normal builds."
+          ],
+          "commands": [
+            {
+              "title": "Inspector schema",
+              "code": "reforge-bench-desktop inspect --schema"
+            },
+            {
+              "title": "Snapshot schema",
+              "code": "reforge-bench schema snapshot"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "package": "@carbon/icons",
+  "version": "11.91.0",
+  "tarball": "https://registry.npmjs.org/@carbon/icons/-/icons-11.91.0.tgz",
+  "integrity": "sha512-XMFcuwdUHrrI+GK3ZB8TjueZoe2hD6ThCfMKT4ZO64aEvEYgqtpkQ+FvLs1KCWDysQbsMEnKdrheBx54vHTY4w==",
+  "files": {
+    "chevron--down.svg": "cc24b1911ef6068b7780554efcac3c0297d3462d6bd41190beedd50626b024a7",
+    "restart.svg": "9b7b2fd5b3e9962ffb18abef7e120687e1e617edd972956c2ee650d2a52b217f",
+    "play.svg": "952ad653646ef5a8d9e1bcb7d7148ef9154e276d1436599cee4e79a68f51ba26",
+    "pause.svg": "3f36a048cbbfc4443938969bb3c395b596d0f7c80ab051b9df78503dc7fed9b8",
+    "arrow--left.svg": "88c6a0767b9111e075f1ab8c4ab42ab567e8ea90554c6d4a09986a09745f6e6f",
+    "arrow--right.svg": "76a702b195105ffc3848be6ed61618a3bdeb3b65262689c95a9be7e9866c2a14",
+    "upload.svg": "b2d51d2f47ed55f6f965a571b93658bf7cdaf0c9f4cf52a946cc7a4c603bd64b",
+    "catalog.svg": "8f55214de0afc86e4739eff393cb5e4a7305695643d68d91e7460c479e4f958f",
+    "tools.svg": "d6b6cef5487e8e630595419b2d9118383ef89253022d189318921a68c4e36887",
+    "flow.svg": "56795cc17046c0e46a49a41ea90e1271218a4e96e9b34b0809260a451c58b739",
+    "time.svg": "c7f1887e75f43c30e385dfe8220c0c752d694023faea4266111a757706c6772d",
+    "help.svg": "0307320cda7b597066923cbc7c3d3f6b73e9377b20c760ad3ef51e5b8082a971",
+    "side-panel--close.svg": "f5b2eef7b0000ee6fefd621f1725bbfed8c7bb298d8dc3548afd188dd56cccfe",
+    "side-panel--open.svg": "fa9e13460db70345baee6bf57e858562b732d1a91749b03d0e173460058d46db"
+  },
+  "descriptors": {
+    "catalog.svg": {
+      "path": "es/catalog/16.js",
+      "sha256": "1e24c70e0b629b3600b3566b20233413869ea9ec1ade014e9485b186a75d5ff3",
+      "conversion": "Serialize the package SVG descriptor without changing attributes or geometry"
+    },
+    "tools.svg": {
+      "path": "es/tools/16.js",
+      "sha256": "a49e691f5a139b04db6e802bb924287a2c3da55d6e52533d52b05c5a11159ba0",
+      "conversion": "Serialize the package SVG descriptor without changing attributes or geometry"
+    },
+    "flow.svg": {
+      "path": "es/flow/16.js",
+      "sha256": "87b57ff6dab3b1f859be5a17e9f2af7591223803eb18d931a54b22bd5dbd76f9",
+      "conversion": "Serialize the package SVG descriptor without changing attributes or geometry"
+    },
+    "time.svg": {
+      "path": "es/time/16.js",
+      "sha256": "efb7ce309cb0b7d46b861684355f04ca9f452f7ed25ca98b405f05a146370635",
+      "conversion": "Serialize the package SVG descriptor without changing attributes or geometry"
+    },
+    "help.svg": {
+      "path": "es/help/16.js",
+      "sha256": "43f9115d5a9f7a90ac307b3c6e5f427ba3a192e9b814a9bac7e7a5092ae31f75",
+      "conversion": "Serialize the package SVG descriptor without changing attributes or geometry"
+    },
+    "side-panel--close.svg": {
+      "path": "es/side-panel--close/16.js",
+      "sha256": "40e4c7898b730cdeea905d7a64976139580df67380dc42823036d97013ba552f",
+      "conversion": "Serialize the package SVG descriptor without changing attributes or geometry"
+    },
+    "side-panel--open.svg": {
+      "path": "es/side-panel--open/16.js",
+      "sha256": "1c61c9c83ad4611d9d9d39c6ac13c57b0f4e1a0b0b68dd5e8aa24fec6974c93d",
+      "conversion": "Serialize the package SVG descriptor without changing attributes or geometry"
+    }
+  }
+}

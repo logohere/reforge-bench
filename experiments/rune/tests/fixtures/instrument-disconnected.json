@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "tick": 1,
+  "source": "simulated",
+  "machine": {
+    "x_mm": null,
+    "z_mm": null,
+    "spindle_rpm": null,
+    "program_state": "unknown"
+  },
+  "instruments": [
+    {
+      "device_id": "scope-fixture",
+      "captured_at_ms": null,
+      "stale": true,
+      "units": null
+    }
+  ],
+  "warnings": ["Scope disconnected. No current instrument sample is available."]
+}

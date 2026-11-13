@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Local client errors",
+  "description": "A local input document, limited to 1 MiB. Each serialized entry is limited to 16 KiB. Detail fields stay local; exported summaries omit free text and identifiers. Unknown fields are ignored.",
+  "type": "array",
+  "maxItems": 1024,
+  "items": {
+    "type": "object",
+    "required": ["kind", "phase"],
+    "properties": {
+      "kind": {"const": "client-error"},
+      "phase": {"enum": ["uncaught", "rejection", "resource"]},
+      "message": {"description": "Text retained locally up to 320 characters; other types ignored"},
+      "stack": {"description": "Text retained locally up to 1600 characters; other types ignored"},
+      "path": {"description": "Local route without query/fragment; omitted from shared reports"},
+      "source": {"description": "Local source route; omitted from shared reports"},
+      "action": {"description": "Bounded local action label; omitted from shared reports"},
+      "session": {"description": "Bounded local session label; omitted from shared reports"},
+      "line": {"description": "Non-negative integer, otherwise normalized to zero"},
+      "column": {"description": "Non-negative integer, otherwise normalized to zero"},
+      "sequence": {"description": "Producer sequence, omitted from shared reports"}
+    }
+  }
+}

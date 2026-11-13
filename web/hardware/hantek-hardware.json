@@ -1,0 +1,7685 @@
+{
+  "schema": "rea-hantek-hardware/1",
+  "id": "hantek-dso2d15",
+  "title": "Hantek DSO2D15 \u00b7 hardware / firmware reference",
+  "identity": {
+    "model": "Hantek DSO2D15"
+  },
+  "scope": "Captured software belongs to the connected scope. Numbered physical pins belong to the related DSO2D10 revision 1.0 reference. Exact connected PCB revision, hidden routing, pad voltages and FPGA identity remain unqualified.",
+  "parts": [
+    {
+      "id": "cpu",
+      "reference": "U36",
+      "label": "CPU / Linux / LCD / USB",
+      "manufacturer": "Allwinner (reference part family)",
+      "part": "F1C200S",
+      "kind": "processor",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu"
+      ],
+      "pins": [
+        {
+          "number": "69",
+          "name": "USB-DP",
+          "net": "USB_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "68",
+          "name": "USB-DM",
+          "net": "USB_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "65",
+          "name": "PA1 / TPX2",
+          "net": "USB_POWER_ON",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "38",
+          "name": "PE11 / CLK_OUT",
+          "net": "USB_HOST_DETECT",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "59",
+          "name": "PC0 / SPI0_CLK",
+          "net": "MCU_FLASH_CLK",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "60",
+          "name": "PC1 / SPI0_CS",
+          "net": "MCU_FLASH_CE",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "61",
+          "name": "PC2 / SPI0_MISO",
+          "net": "MCU_FLASH_MISO",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "62",
+          "name": "PC3 / SPI0_MOSI",
+          "net": "MCU_FLASH_MOSI",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "6",
+          "name": "PD0 / TWI0_SDA",
+          "net": "I2C_SDA",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "18",
+          "name": "PD12 / TWI0_SCK",
+          "net": "I2C_SCL",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "26",
+          "name": "PD18 / LCD_CLK",
+          "net": "LCD_CLK",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "27",
+          "name": "PD19 / LCD_DE",
+          "net": "LCD_DE",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "28",
+          "name": "PD20 / LCD_HSYNC",
+          "net": "TP_RESET",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "29",
+          "name": "PD21 / LCD_VSYNC",
+          "net": "TP_INT",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "37",
+          "name": "PE12 / PWM0",
+          "net": "LCD_BRIGHTNESS",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "49",
+          "name": "PE0 / UART0_RX",
+          "net": "SERIAL_RX",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "48",
+          "name": "PE1 / UART0_TX",
+          "net": "SERIAL_TX",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "47",
+          "name": "PE2 / CLK_OUT",
+          "net": "SERIAL_READY",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "45",
+          "name": "PE4",
+          "net": "FPGA_READY",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "44",
+          "name": "PE5",
+          "net": "FPGA_RECONFIG",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "43",
+          "name": "PE6",
+          "net": "FPGA_DONE",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "42",
+          "name": "PE7 / SPI1_CS",
+          "net": "FPGA_SPI_CS",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "41",
+          "name": "PE8 / SPI1_MOSI",
+          "net": "FPGA_SPI_MOSI",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "40",
+          "name": "PE9 / SPI1_CLK",
+          "net": "FPGA_SPI_CLK",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "39",
+          "name": "PE10 / SPI1_MISO",
+          "net": "FPGA_SPI_MISO",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "51",
+          "name": "HOSCI",
+          "net": "CPU_CLK_24MHZ",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "7",
+          "name": "LCD_D3",
+          "net": "LCD_D3",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "8",
+          "name": "LCD_D4",
+          "net": "LCD_D4",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "9",
+          "name": "LCD_D5",
+          "net": "LCD_D5",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "10",
+          "name": "LCD_D6",
+          "net": "LCD_D6",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "11",
+          "name": "LCD_D7",
+          "net": "LCD_D7",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "12",
+          "name": "LCD_D10",
+          "net": "LCD_D10",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "13",
+          "name": "LCD_D11",
+          "net": "LCD_D11",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "14",
+          "name": "LCD_D12",
+          "net": "LCD_D12",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "15",
+          "name": "LCD_D13",
+          "net": "LCD_D13",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "16",
+          "name": "LCD_D14",
+          "net": "LCD_D14",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "17",
+          "name": "LCD_D15",
+          "net": "LCD_D15",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "19",
+          "name": "LCD_D19",
+          "net": "LCD_D19",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "21",
+          "name": "LCD_D20",
+          "net": "LCD_D20",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "23",
+          "name": "LCD_D21",
+          "net": "LCD_D21",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "24",
+          "name": "LCD_D22",
+          "net": "LCD_D22",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "25",
+          "name": "LCD_D23",
+          "net": "LCD_D23",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        }
+      ],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "89 numbered contacts including GND in source symbol; exact physical package unverified"
+    },
+    {
+      "id": "nand",
+      "reference": "U2",
+      "label": "SPI NAND / installed partitions",
+      "manufacturer": "Winbond (reference part family)",
+      "part": "W25N01G",
+      "kind": "storage",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu"
+      ],
+      "pins": [
+        {
+          "number": "1",
+          "name": "CS#",
+          "net": "MCU_FLASH_CE",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "2",
+          "name": "DO / IO1",
+          "net": "MCU_FLASH_MISO",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "5",
+          "name": "DI / IO0",
+          "net": "MCU_FLASH_MOSI",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "6",
+          "name": "CLK",
+          "net": "MCU_FLASH_CLK",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        }
+      ],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "8 + exposed-pad source symbol"
+    },
+    {
+      "id": "eeprom",
+      "reference": "U9",
+      "label": "I\u00b2C calibration / settings reference",
+      "manufacturer": "Manufacturer not specified in source",
+      "part": "24C02",
+      "kind": "storage",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu"
+      ],
+      "pins": [
+        {
+          "number": "5",
+          "name": "SDA",
+          "net": "I2C_SDA",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "6",
+          "name": "SCL",
+          "net": "I2C_SCL",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        }
+      ],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "8-pin source symbol"
+    },
+    {
+      "id": "fpga",
+      "reference": "U7",
+      "label": "Acquisition / timing / keypad logic",
+      "manufacturer": "Gowin if reference marking matches; unit vendor unverified",
+      "part": "GW2AR-18-144",
+      "kind": "fpga",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-fpga",
+        "gowin"
+      ],
+      "pins": [
+        {
+          "number": "20",
+          "name": "RECONFIG_N",
+          "net": "FPGA_RECONFIG",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "22",
+          "name": "READY",
+          "net": "FPGA_READY",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "21",
+          "name": "DONE",
+          "net": "FPGA_DONE",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "87",
+          "name": "CS",
+          "net": "FPGA_SPI_CS",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "90",
+          "name": "SSPI",
+          "net": "FPGA_SPI_MOSI",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "88",
+          "name": "SO",
+          "net": "FPGA_SPI_MISO",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "15",
+          "name": "SCLK",
+          "net": "FPGA_SPI_CLK",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "18",
+          "name": "TDO",
+          "net": "TDO",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "16",
+          "name": "TDI",
+          "net": "TDI",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "14",
+          "name": "TCK",
+          "net": "TCK",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "13",
+          "name": "TMS",
+          "net": "TMS",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "118",
+          "name": "IO / SDA",
+          "net": "I2C_SDA",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "117",
+          "name": "IO / SCL",
+          "net": "I2C_SCL",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "126",
+          "name": "IO",
+          "net": "KEY_SCAN_DATA",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "125",
+          "name": "IO",
+          "net": "KEY_SCAN_RESET",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "124",
+          "name": "IO",
+          "net": "KEY_SCAN_CLOCK",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "122",
+          "name": "IO",
+          "net": "LED_CLOCK",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "121",
+          "name": "IO",
+          "net": "LED_LOAD",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "120",
+          "name": "IO",
+          "net": "LED_DATA",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "119",
+          "name": "IO",
+          "net": "K4_LED",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "123",
+          "name": "GCLK",
+          "net": "FPGA_CLK_24MHZ",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "116",
+          "name": "IO",
+          "net": "EXT_TRIG",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "115",
+          "name": "IO",
+          "net": "PROBE_CALIBRATION",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "114",
+          "name": "IO",
+          "net": "CS_CLK",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "113",
+          "name": "IO",
+          "net": "CS_LOAD",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "112",
+          "name": "IO",
+          "net": "CS_DATA",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "110",
+          "name": "IO",
+          "net": "CHANNEL1_OFFSET_PWM",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "111",
+          "name": "IO",
+          "net": "CHANNEL2_OFFSET_PWM",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "141",
+          "name": "IO",
+          "net": "DAC_CLK",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "140",
+          "name": "IO",
+          "net": "DAC_D1",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "139",
+          "name": "IO",
+          "net": "DAC_D2",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "138",
+          "name": "IO",
+          "net": "DAC_D3",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "137",
+          "name": "IO",
+          "net": "DAC_D4",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "136",
+          "name": "IO",
+          "net": "DAC_D5",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "135",
+          "name": "IO",
+          "net": "DAC_D6",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "134",
+          "name": "IO",
+          "net": "DAC_D7",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "133",
+          "name": "IO",
+          "net": "DAC_D8",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "132",
+          "name": "IO",
+          "net": "DAC_D9",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "131",
+          "name": "IO",
+          "net": "DAC_D10",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "130",
+          "name": "IO",
+          "net": "DAC_D11",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "129",
+          "name": "IO",
+          "net": "DAC_D12",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "32",
+          "name": "LVDS / ADC_DI0_P",
+          "net": "ADC_DI0_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "33",
+          "name": "LVDS / ADC_DI0_M",
+          "net": "ADC_DI0_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "34",
+          "name": "LVDS / ADC_DI1_P",
+          "net": "ADC_DI1_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "35",
+          "name": "LVDS / ADC_DI1_M",
+          "net": "ADC_DI1_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "38",
+          "name": "LVDS / ADC_DI2_P",
+          "net": "ADC_DI2_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "39",
+          "name": "LVDS / ADC_DI2_M",
+          "net": "ADC_DI2_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "40",
+          "name": "LVDS / ADC_DI3_P",
+          "net": "ADC_DI3_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "41",
+          "name": "LVDS / ADC_DI3_M",
+          "net": "ADC_DI3_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "42",
+          "name": "LVDS / ADC_DI4_P",
+          "net": "ADC_DI4_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "43",
+          "name": "LVDS / ADC_DI4_M",
+          "net": "ADC_DI4_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "44",
+          "name": "LVDS / ADC_DI5_P",
+          "net": "ADC_DI5_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "45",
+          "name": "LVDS / ADC_DI5_M",
+          "net": "ADC_DI5_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "46",
+          "name": "LVDS / ADC_DI6_P",
+          "net": "ADC_DI6_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "47",
+          "name": "LVDS / ADC_DI6_M",
+          "net": "ADC_DI6_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "48",
+          "name": "LVDS / ADC_DI7_P",
+          "net": "ADC_DI7_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "49",
+          "name": "LVDS / ADC_DI7_M",
+          "net": "ADC_DI7_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "3",
+          "name": "LVDS / ADC_DID0_P",
+          "net": "ADC_DID0_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "4",
+          "name": "LVDS / ADC_DID0_M",
+          "net": "ADC_DID0_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "6",
+          "name": "LVDS / ADC_DID1_P",
+          "net": "ADC_DID1_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "7",
+          "name": "LVDS / ADC_DID1_M",
+          "net": "ADC_DID1_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "9",
+          "name": "LVDS / ADC_DID2_P",
+          "net": "ADC_DID2_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "10",
+          "name": "LVDS / ADC_DID2_M",
+          "net": "ADC_DID2_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "11",
+          "name": "LVDS / ADC_DID3_P",
+          "net": "ADC_DID3_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "12",
+          "name": "LVDS / ADC_DID3_M",
+          "net": "ADC_DID3_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "23",
+          "name": "LVDS / ADC_DID4_P",
+          "net": "ADC_DID4_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "24",
+          "name": "LVDS / ADC_DID4_M",
+          "net": "ADC_DID4_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "25",
+          "name": "LVDS / ADC_DID5_P",
+          "net": "ADC_DID5_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "26",
+          "name": "LVDS / ADC_DID5_M",
+          "net": "ADC_DID5_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "27",
+          "name": "LVDS / ADC_DID6_P",
+          "net": "ADC_DID6_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "28",
+          "name": "LVDS / ADC_DID6_M",
+          "net": "ADC_DID6_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "29",
+          "name": "LVDS / ADC_DID7_P",
+          "net": "ADC_DID7_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "30",
+          "name": "LVDS / ADC_DID7_M",
+          "net": "ADC_DID7_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "71",
+          "name": "LVDS / ADC_DQ0_P",
+          "net": "ADC_DQ0_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "70",
+          "name": "LVDS / ADC_DQ0_M",
+          "net": "ADC_DQ0_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "69",
+          "name": "LVDS / ADC_DQ1_P",
+          "net": "ADC_DQ1_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "68",
+          "name": "LVDS / ADC_DQ1_M",
+          "net": "ADC_DQ1_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "67",
+          "name": "LVDS / ADC_DQ2_P",
+          "net": "ADC_DQ2_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "66",
+          "name": "LVDS / ADC_DQ2_M",
+          "net": "ADC_DQ2_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "65",
+          "name": "LVDS / ADC_DQ3_P",
+          "net": "ADC_DQ3_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "64",
+          "name": "LVDS / ADC_DQ3_M",
+          "net": "ADC_DQ3_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "63",
+          "name": "LVDS / ADC_DQ4_P",
+          "net": "ADC_DQ4_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "62",
+          "name": "LVDS / ADC_DQ4_M",
+          "net": "ADC_DQ4_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "61",
+          "name": "LVDS / ADC_DQ5_P",
+          "net": "ADC_DQ5_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "60",
+          "name": "LVDS / ADC_DQ5_M",
+          "net": "ADC_DQ5_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "59",
+          "name": "LVDS / ADC_DQ6_P",
+          "net": "ADC_DQ6_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "58",
+          "name": "LVDS / ADC_DQ6_M",
+          "net": "ADC_DQ6_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "57",
+          "name": "LVDS / ADC_DQ7_P",
+          "net": "ADC_DQ7_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "56",
+          "name": "LVDS / ADC_DQ7_M",
+          "net": "ADC_DQ7_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "102",
+          "name": "LVDS / ADC_DQD0_P",
+          "net": "ADC_DQD0_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "101",
+          "name": "LVDS / ADC_DQD0_M",
+          "net": "ADC_DQD0_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "100",
+          "name": "LVDS / ADC_DQD1_P",
+          "net": "ADC_DQD1_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "99",
+          "name": "LVDS / ADC_DQD1_M",
+          "net": "ADC_DQD1_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "98",
+          "name": "LVDS / ADC_DQD2_P",
+          "net": "ADC_DQD2_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "97",
+          "name": "LVDS / ADC_DQD2_M",
+          "net": "ADC_DQD2_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "96",
+          "name": "LVDS / ADC_DQD3_P",
+          "net": "ADC_DQD3_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "95",
+          "name": "LVDS / ADC_DQD3_M",
+          "net": "ADC_DQD3_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "94",
+          "name": "LVDS / ADC_DQD4_P",
+          "net": "ADC_DQD4_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "93",
+          "name": "LVDS / ADC_DQD4_M",
+          "net": "ADC_DQD4_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "84",
+          "name": "LVDS / ADC_DQD5_P",
+          "net": "ADC_DQD5_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "83",
+          "name": "LVDS / ADC_DQD5_M",
+          "net": "ADC_DQD5_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "80",
+          "name": "LVDS / ADC_DQD6_P",
+          "net": "ADC_DQD6_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "79",
+          "name": "LVDS / ADC_DQD6_M",
+          "net": "ADC_DQD6_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "78",
+          "name": "LVDS / ADC_DQD7_P",
+          "net": "ADC_DQD7_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "76",
+          "name": "LVDS / ADC_DQD7_M",
+          "net": "ADC_DQD7_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "50",
+          "name": "LVDS / ADC_DCLK_P",
+          "net": "ADC_DCLK_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "51",
+          "name": "LVDS / ADC_DCLK_M",
+          "net": "ADC_DCLK_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "54",
+          "name": "LVDS / ADC_OR_P",
+          "net": "ADC_OR_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "52",
+          "name": "LVDS / ADC_OR_M",
+          "net": "ADC_OR_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "106",
+          "name": "LVDS / ADC_CLK_P",
+          "net": "ADC_CLK_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "105",
+          "name": "LVDS / ADC_CLK_M",
+          "net": "ADC_CLK_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        }
+      ],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "144-pin reference symbol; pin constraints NOT qualified for connected PCB"
+    },
+    {
+      "id": "adc",
+      "reference": "U38",
+      "label": "Dual analog-to-digital converter",
+      "manufacturer": "Texas Instruments / National (reference family)",
+      "part": "ADC08D500",
+      "kind": "adc",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-fpga",
+        "ti-adc"
+      ],
+      "pins": [
+        {
+          "number": "10",
+          "name": "VINI-",
+          "net": "CHANNEL1_IN_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "11",
+          "name": "VINI+",
+          "net": "CHANNEL1_IN_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "22",
+          "name": "VINQ+",
+          "net": "CHANNEL2_IN_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "23",
+          "name": "VINQ-",
+          "net": "CHANNEL2_IN_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "102",
+          "name": "DI0+",
+          "net": "ADC_DI0_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "101",
+          "name": "DI0-",
+          "net": "ADC_DI0_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "100",
+          "name": "DI1+",
+          "net": "ADC_DI1_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "99",
+          "name": "DI1-",
+          "net": "ADC_DI1_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "96",
+          "name": "DI2+",
+          "net": "ADC_DI2_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "95",
+          "name": "DI2-",
+          "net": "ADC_DI2_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "94",
+          "name": "DI3+",
+          "net": "ADC_DI3_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "93",
+          "name": "DI3-",
+          "net": "ADC_DI3_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "92",
+          "name": "DI4+",
+          "net": "ADC_DI4_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "91",
+          "name": "DI4-",
+          "net": "ADC_DI4_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "90",
+          "name": "DI5+",
+          "net": "ADC_DI5_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "89",
+          "name": "DI5-",
+          "net": "ADC_DI5_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "86",
+          "name": "DI6+",
+          "net": "ADC_DI6_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "85",
+          "name": "DI6-",
+          "net": "ADC_DI6_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "84",
+          "name": "DI7+",
+          "net": "ADC_DI7_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "83",
+          "name": "DI7-",
+          "net": "ADC_DI7_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "125",
+          "name": "DID0+",
+          "net": "ADC_DID0_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "124",
+          "name": "DID0-",
+          "net": "ADC_DID0_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "123",
+          "name": "DID1+",
+          "net": "ADC_DID1_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "122",
+          "name": "DID1-",
+          "net": "ADC_DID1_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "118",
+          "name": "DID2+",
+          "net": "ADC_DID2_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "117",
+          "name": "DID2-",
+          "net": "ADC_DID2_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "116",
+          "name": "DID3+",
+          "net": "ADC_DID3_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "115",
+          "name": "DID3-",
+          "net": "ADC_DID3_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "114",
+          "name": "DID4+",
+          "net": "ADC_DID4_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "113",
+          "name": "DID4-",
+          "net": "ADC_DID4_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "112",
+          "name": "DID5+",
+          "net": "ADC_DID5_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "111",
+          "name": "DID5-",
+          "net": "ADC_DID5_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "106",
+          "name": "DID6+",
+          "net": "ADC_DID6_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "105",
+          "name": "DID6-",
+          "net": "ADC_DID6_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "104",
+          "name": "DID7+",
+          "net": "ADC_DID7_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "103",
+          "name": "DID7-",
+          "net": "ADC_DID7_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "58",
+          "name": "DQ0+",
+          "net": "ADC_DQ0_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "59",
+          "name": "DQ0-",
+          "net": "ADC_DQ0_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "60",
+          "name": "DQ1+",
+          "net": "ADC_DQ1_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "61",
+          "name": "DQ1-",
+          "net": "ADC_DQ1_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "65",
+          "name": "DQ2+",
+          "net": "ADC_DQ2_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "66",
+          "name": "DQ2-",
+          "net": "ADC_DQ2_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "67",
+          "name": "DQ3+",
+          "net": "ADC_DQ3_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "68",
+          "name": "DQ3-",
+          "net": "ADC_DQ3_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "69",
+          "name": "DQ4+",
+          "net": "ADC_DQ4_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "70",
+          "name": "DQ4-",
+          "net": "ADC_DQ4_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "71",
+          "name": "DQ5+",
+          "net": "ADC_DQ5_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "72",
+          "name": "DQ5-",
+          "net": "ADC_DQ5_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "75",
+          "name": "DQ6+",
+          "net": "ADC_DQ6_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "76",
+          "name": "DQ6-",
+          "net": "ADC_DQ6_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "77",
+          "name": "DQ7+",
+          "net": "ADC_DQ7_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "78",
+          "name": "DQ7-",
+          "net": "ADC_DQ7_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "36",
+          "name": "DQD0+",
+          "net": "ADC_DQD0_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "37",
+          "name": "DQD0-",
+          "net": "ADC_DQD0_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "38",
+          "name": "DQD1+",
+          "net": "ADC_DQD1_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "39",
+          "name": "DQD1-",
+          "net": "ADC_DQD1_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "43",
+          "name": "DQD2+",
+          "net": "ADC_DQD2_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "44",
+          "name": "DQD2-",
+          "net": "ADC_DQD2_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "45",
+          "name": "DQD3+",
+          "net": "ADC_DQD3_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "46",
+          "name": "DQD3-",
+          "net": "ADC_DQD3_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "47",
+          "name": "DQD4+",
+          "net": "ADC_DQD4_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "48",
+          "name": "DQD4-",
+          "net": "ADC_DQD4_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "49",
+          "name": "DQD5+",
+          "net": "ADC_DQD5_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "50",
+          "name": "DQD5-",
+          "net": "ADC_DQD5_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "54",
+          "name": "DQD6+",
+          "net": "ADC_DQD6_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "55",
+          "name": "DQD6-",
+          "net": "ADC_DQD6_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "56",
+          "name": "DQD7+",
+          "net": "ADC_DQD7_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "57",
+          "name": "DQD7-",
+          "net": "ADC_DQD7_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "82",
+          "name": "ADC_DCLK_P",
+          "net": "ADC_DCLK_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "81",
+          "name": "ADC_DCLK_M",
+          "net": "ADC_DCLK_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "79",
+          "name": "ADC_OR_P",
+          "net": "ADC_OR_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "80",
+          "name": "ADC_OR_M",
+          "net": "ADC_OR_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "18",
+          "name": "ADC_CLK_P",
+          "net": "ADC_CLK_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "19",
+          "name": "ADC_CLK_M",
+          "net": "ADC_CLK_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        }
+      ],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "128-pin HLQFP + exposed-pad reference; unit marking unverified"
+    },
+    {
+      "id": "ui",
+      "reference": "J1",
+      "label": "Display / front-panel connector",
+      "manufacturer": "Connector vendor unknown",
+      "part": "50-position FPC, 0.5 mm",
+      "kind": "connector",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-io"
+      ],
+      "pins": [
+        {
+          "number": "1",
+          "name": "KEY_SCAN_DATA",
+          "net": "KEY_SCAN_DATA",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "2",
+          "name": "KEY_SCAN_RESET",
+          "net": "KEY_SCAN_RESET",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "3",
+          "name": "KEY_SCAN_CLOCK",
+          "net": "KEY_SCAN_CLOCK",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "4",
+          "name": "LED_CLOCK",
+          "net": "LED_CLOCK",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "5",
+          "name": "LED_LOAD",
+          "net": "LED_LOAD",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "6",
+          "name": "LED_DATA",
+          "net": "LED_DATA",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "7",
+          "name": "K4_LED",
+          "net": "K4_LED",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "8",
+          "name": "I2C_SDA",
+          "net": "I2C_SDA",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "9",
+          "name": "I2C_SCL",
+          "net": "I2C_SCL",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "10",
+          "name": "LCD_BRIGHTNESS",
+          "net": "LCD_BRIGHTNESS",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "26",
+          "name": "TP_INT",
+          "net": "TP_INT",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "27",
+          "name": "TP_RESET",
+          "net": "TP_RESET",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "29",
+          "name": "LCD_DE",
+          "net": "LCD_DE",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "31",
+          "name": "LCD_CLK",
+          "net": "LCD_CLK",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "33",
+          "name": "LCD_D23",
+          "net": "LCD_D23",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "34",
+          "name": "LCD_D22",
+          "net": "LCD_D22",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "35",
+          "name": "LCD_D21",
+          "net": "LCD_D21",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "36",
+          "name": "LCD_D20",
+          "net": "LCD_D20",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "37",
+          "name": "LCD_D19",
+          "net": "LCD_D19",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "39",
+          "name": "LCD_D15",
+          "net": "LCD_D15",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "40",
+          "name": "LCD_D14",
+          "net": "LCD_D14",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "41",
+          "name": "LCD_D13",
+          "net": "LCD_D13",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "42",
+          "name": "LCD_D12",
+          "net": "LCD_D12",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "43",
+          "name": "LCD_D11",
+          "net": "LCD_D11",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "44",
+          "name": "LCD_D10",
+          "net": "LCD_D10",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "46",
+          "name": "LCD_D7",
+          "net": "LCD_D7",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "47",
+          "name": "LCD_D6",
+          "net": "LCD_D6",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "48",
+          "name": "LCD_D5",
+          "net": "LCD_D5",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "49",
+          "name": "LCD_D4",
+          "net": "LCD_D4",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "50",
+          "name": "LCD_D3",
+          "net": "LCD_D3",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        }
+      ],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "50 positions, power/ground not exhaustively transcribed"
+    },
+    {
+      "id": "rear-usb",
+      "reference": "J904",
+      "label": "Rear USB-B / PC control",
+      "manufacturer": "Connector vendor unknown",
+      "part": "USB-B",
+      "kind": "connector",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-io"
+      ],
+      "pins": [
+        {
+          "number": "1",
+          "name": "VBUS",
+          "net": "REAR_VBUS",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "2",
+          "name": "D-",
+          "net": "REAR_DM",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "3",
+          "name": "D+",
+          "net": "REAR_DP",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "4",
+          "name": "GND",
+          "net": "GND",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        }
+      ],
+      "position_reference": "Functional diagram only; physical board coordinates unknown"
+    },
+    {
+      "id": "front-usb",
+      "reference": "J902",
+      "label": "Front USB-A / update probes",
+      "manufacturer": "Connector vendor unknown",
+      "part": "USB-A",
+      "kind": "connector",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-io"
+      ],
+      "pins": [
+        {
+          "number": "1",
+          "name": "VCC",
+          "net": "FRONT_VBUS",
+          "status": "standard-pin-numbering-inferred",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "2",
+          "name": "D-",
+          "net": "FRONT_DM",
+          "status": "standard-pin-numbering-inferred",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "3",
+          "name": "D+",
+          "net": "FRONT_DP",
+          "status": "standard-pin-numbering-inferred",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "4",
+          "name": "GND",
+          "net": "GND",
+          "status": "standard-pin-numbering-inferred",
+          "source_ids": [
+            "schematic-io"
+          ]
+        }
+      ],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Four USB-A contacts; standard pin numbering inferred because source J902 omits numerals"
+    },
+    {
+      "id": "r30",
+      "reference": "R30",
+      "label": "22 \u03a9 rear D+",
+      "manufacturer": "Not specified",
+      "part": "22 \u03a9",
+      "kind": "resistor",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-io"
+      ],
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "USB_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "REAR_DP",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        }
+      ],
+      "position_reference": "Functional diagram only; physical board coordinates unknown"
+    },
+    {
+      "id": "r29",
+      "reference": "R29",
+      "label": "22 \u03a9 rear D\u2212",
+      "manufacturer": "Not specified",
+      "part": "22 \u03a9",
+      "kind": "resistor",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-io"
+      ],
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "USB_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "REAR_DM",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        }
+      ],
+      "position_reference": "Functional diagram only; physical board coordinates unknown"
+    },
+    {
+      "id": "r909",
+      "reference": "R909",
+      "label": "22 \u03a9 front D+",
+      "manufacturer": "Not specified",
+      "part": "22 \u03a9",
+      "kind": "resistor",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-io"
+      ],
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "USB_P",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "FRONT_DP",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        }
+      ],
+      "position_reference": "Functional diagram only; physical board coordinates unknown"
+    },
+    {
+      "id": "r908",
+      "reference": "R908",
+      "label": "22 \u03a9 front D\u2212",
+      "manufacturer": "Not specified",
+      "part": "22 \u03a9",
+      "kind": "resistor",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-io"
+      ],
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "USB_M",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "FRONT_DM",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-io"
+          ]
+        }
+      ],
+      "position_reference": "Functional diagram only; physical board coordinates unknown"
+    },
+    {
+      "id": "jtag",
+      "reference": "PAD1",
+      "label": "FPGA JTAG test pads",
+      "manufacturer": "PCB pads",
+      "part": "4 pads",
+      "kind": "connector",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-fpga"
+      ],
+      "pins": [
+        {
+          "number": "1",
+          "name": "TDO",
+          "net": "TDO",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "2",
+          "name": "TDI",
+          "net": "TDI",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "3",
+          "name": "TCK",
+          "net": "TCK",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        },
+        {
+          "number": "4",
+          "name": "TMS",
+          "net": "TMS",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-fpga"
+          ]
+        }
+      ],
+      "position_reference": "Functional diagram only; physical board coordinates unknown"
+    },
+    {
+      "id": "clock",
+      "reference": "Y2",
+      "label": "24 MHz oscillator",
+      "manufacturer": "Not specified",
+      "part": "24 MHz",
+      "kind": "clock",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu"
+      ],
+      "pins": [
+        {
+          "number": "3",
+          "name": "OUT",
+          "net": "CPU_CLK_24MHZ",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        }
+      ],
+      "position_reference": "Functional diagram only; physical board coordinates unknown"
+    },
+    {
+      "id": "clock-link",
+      "reference": "R82",
+      "label": "Shared oscillator link",
+      "manufacturer": "Not specified",
+      "part": "0 \u03a9",
+      "kind": "resistor",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu"
+      ],
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "CPU_CLK_24MHZ",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "FPGA_CLK_24MHZ",
+          "status": "family-reference",
+          "source_ids": [
+            "schematic-cpu"
+          ]
+        }
+      ],
+      "position_reference": "Functional diagram only; physical board coordinates unknown"
+    },
+    {
+      "id": "u35",
+      "reference": "U35",
+      "label": "AWG digital-to-analog converter",
+      "manufacturer": "Texas Instruments",
+      "part": "DAC902E",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-awg",
+        "ti-dac"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u18",
+      "reference": "U18",
+      "label": "AWG output amplifier",
+      "manufacturer": "Texas Instruments / National",
+      "part": "LMH6702MA",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-awg"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "x1",
+      "reference": "X1",
+      "label": "AWG relay",
+      "manufacturer": "Hongfa reference series",
+      "part": "HFD4/4.5-S",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-awg"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "j300",
+      "reference": "J300",
+      "label": "AWG / trigger connector",
+      "manufacturer": "Unknown",
+      "part": "BNC",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-awg"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u15",
+      "reference": "U15",
+      "label": "Channel control shift register",
+      "manufacturer": "Not specified",
+      "part": "HC595",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-control"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u26",
+      "reference": "U26",
+      "label": "Channel control shift register",
+      "manufacturer": "Not specified",
+      "part": "HC595",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-control"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u6",
+      "reference": "U6",
+      "label": "Offset inverter",
+      "manufacturer": "Not specified",
+      "part": "AHC1G04",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-control"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u10",
+      "reference": "U10",
+      "label": "Offset inverter",
+      "manufacturer": "Not specified",
+      "part": "AHC1G04",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-control"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u11",
+      "reference": "U11",
+      "label": "Offset buffer",
+      "manufacturer": "Texas Instruments",
+      "part": "TLV272",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-control"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u20",
+      "reference": "U20",
+      "label": "Offset buffer",
+      "manufacturer": "Texas Instruments",
+      "part": "TLV272",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-control"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u22",
+      "reference": "U22",
+      "label": "Channel control buffer",
+      "manufacturer": "Texas Instruments",
+      "part": "TLV272",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-control"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u5",
+      "reference": "U5",
+      "label": "Reference voltage",
+      "manufacturer": "Texas Instruments",
+      "part": "REF3040",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-control"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u12",
+      "reference": "U12",
+      "label": "Digital 3.3 V regulator",
+      "manufacturer": "Not specified",
+      "part": "AMS1117-3.3",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-power"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u14",
+      "reference": "U14",
+      "label": "Digital 1.1 V regulator",
+      "manufacturer": "Texas Instruments",
+      "part": "TLV62565",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-power"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u30",
+      "reference": "U30",
+      "label": "Digital 1.9 V regulator",
+      "manufacturer": "Texas Instruments",
+      "part": "TLV62565",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-power"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u4",
+      "reference": "U4",
+      "label": "Digital 2.5 V regulator",
+      "manufacturer": "Not specified",
+      "part": "AMS1117",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-power"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u3",
+      "reference": "U3",
+      "label": "Power heartbeat buffer",
+      "manufacturer": "Texas Instruments family",
+      "part": "SN74LVC1G17",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-power"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u908",
+      "reference": "U908",
+      "label": "Analog positive rail regulator",
+      "manufacturer": "Not specified",
+      "part": "78D05",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-power"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u904",
+      "reference": "U904",
+      "label": "Analog negative rail regulator",
+      "manufacturer": "Not specified",
+      "part": "79D05",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-power"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "j906",
+      "reference": "J906",
+      "label": "Digital power input",
+      "manufacturer": "Unknown",
+      "part": "POWER_TR",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-power"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "j905",
+      "reference": "J905",
+      "label": "Analog power input",
+      "manufacturer": "Unknown",
+      "part": "POWER_TR",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-power"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u1",
+      "reference": "U1",
+      "label": "Serial interface (not populated in reference)",
+      "manufacturer": "Multiple vendors; not established",
+      "part": "MAX232",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-io"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u25",
+      "reference": "U25",
+      "label": "CH1 analog multiplexer",
+      "manufacturer": "Multiple vendors; not established",
+      "part": "74HC4051D",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-ch1"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u24",
+      "reference": "U24",
+      "label": "CH1 wideband amplifier",
+      "manufacturer": "Texas Instruments / National",
+      "part": "LMH6702MA",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-ch1"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u401",
+      "reference": "U401",
+      "label": "CH1 differential ADC driver",
+      "manufacturer": "Texas Instruments / National",
+      "part": "LMH6551",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-ch1",
+        "ti-diff"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u16",
+      "reference": "U16",
+      "label": "CH1 offset amplifier",
+      "manufacturer": "Texas Instruments",
+      "part": "OPA197",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-ch1"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u100",
+      "reference": "U100",
+      "label": "CH1 coupling component; identity unresolved",
+      "manufacturer": "Not established",
+      "part": "LT210",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-ch1"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "j100",
+      "reference": "J100",
+      "label": "CH1 input",
+      "manufacturer": "Unknown",
+      "part": "BNC",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-ch1"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u28",
+      "reference": "U28",
+      "label": "CH2 analog multiplexer",
+      "manufacturer": "Multiple vendors; not established",
+      "part": "74HC4051D",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-ch2"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u27",
+      "reference": "U27",
+      "label": "CH2 wideband amplifier",
+      "manufacturer": "Texas Instruments / National",
+      "part": "LMH6702MA",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-ch2"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u402",
+      "reference": "U402",
+      "label": "CH2 differential ADC driver",
+      "manufacturer": "Texas Instruments / National",
+      "part": "LMH6551",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-ch2",
+        "ti-diff"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u201",
+      "reference": "U201",
+      "label": "CH2 offset amplifier",
+      "manufacturer": "Texas Instruments",
+      "part": "OPA197",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-ch2"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "u200",
+      "reference": "U200",
+      "label": "CH2 coupling component; identity unresolved",
+      "manufacturer": "Not established",
+      "part": "LT210",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-ch2"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    },
+    {
+      "id": "j200",
+      "reference": "J200",
+      "label": "CH2 input",
+      "manufacturer": "Unknown",
+      "part": "BNC",
+      "kind": "reference-inventory",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-ch2"
+      ],
+      "pins": [],
+      "position_reference": "Functional diagram only; physical board coordinates unknown",
+      "package": "Not transcribed; source inventory, no invented footprint"
+    }
+  ],
+  "connections": [
+    {
+      "id": "USB_P",
+      "label": "USB_P",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "69"
+        },
+        {
+          "part": "r30",
+          "pin": "1"
+        },
+        {
+          "part": "r909",
+          "pin": "1"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "69"
+      },
+      "to": {
+        "part": "r30",
+        "pin": "1"
+      },
+      "bus": "USB",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "USB_M",
+      "label": "USB_M",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "68"
+        },
+        {
+          "part": "r29",
+          "pin": "1"
+        },
+        {
+          "part": "r908",
+          "pin": "1"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "68"
+      },
+      "to": {
+        "part": "r29",
+        "pin": "1"
+      },
+      "bus": "USB",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "USB_POWER_ON",
+      "label": "USB_POWER_ON",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "65"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "65"
+      },
+      "to": null,
+      "bus": "USB",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu"
+      ]
+    },
+    {
+      "id": "USB_HOST_DETECT",
+      "label": "USB_HOST_DETECT",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "38"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "38"
+      },
+      "to": null,
+      "bus": "USB",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu"
+      ]
+    },
+    {
+      "id": "MCU_FLASH_CLK",
+      "label": "MCU_FLASH_CLK",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "59"
+        },
+        {
+          "part": "nand",
+          "pin": "6"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "59"
+      },
+      "to": {
+        "part": "nand",
+        "pin": "6"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu"
+      ]
+    },
+    {
+      "id": "MCU_FLASH_CE",
+      "label": "MCU_FLASH_CE",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "60"
+        },
+        {
+          "part": "nand",
+          "pin": "1"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "60"
+      },
+      "to": {
+        "part": "nand",
+        "pin": "1"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu"
+      ]
+    },
+    {
+      "id": "MCU_FLASH_MISO",
+      "label": "MCU_FLASH_MISO",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "61"
+        },
+        {
+          "part": "nand",
+          "pin": "2"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "61"
+      },
+      "to": {
+        "part": "nand",
+        "pin": "2"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu"
+      ]
+    },
+    {
+      "id": "MCU_FLASH_MOSI",
+      "label": "MCU_FLASH_MOSI",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "62"
+        },
+        {
+          "part": "nand",
+          "pin": "5"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "62"
+      },
+      "to": {
+        "part": "nand",
+        "pin": "5"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu"
+      ]
+    },
+    {
+      "id": "I2C_SDA",
+      "label": "I2C_SDA",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "6"
+        },
+        {
+          "part": "eeprom",
+          "pin": "5"
+        },
+        {
+          "part": "fpga",
+          "pin": "118"
+        },
+        {
+          "part": "ui",
+          "pin": "8"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "6"
+      },
+      "to": {
+        "part": "eeprom",
+        "pin": "5"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-cpu",
+        "schematic-fpga",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "I2C_SCL",
+      "label": "I2C_SCL",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "18"
+        },
+        {
+          "part": "eeprom",
+          "pin": "6"
+        },
+        {
+          "part": "fpga",
+          "pin": "117"
+        },
+        {
+          "part": "ui",
+          "pin": "9"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "18"
+      },
+      "to": {
+        "part": "eeprom",
+        "pin": "6"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-cpu",
+        "schematic-fpga",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "LCD_CLK",
+      "label": "LCD_CLK",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "26"
+        },
+        {
+          "part": "ui",
+          "pin": "31"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "26"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "31"
+      },
+      "bus": "LCD",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "LCD_DE",
+      "label": "LCD_DE",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "27"
+        },
+        {
+          "part": "ui",
+          "pin": "29"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "27"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "29"
+      },
+      "bus": "LCD",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "TP_RESET",
+      "label": "TP_RESET",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "28"
+        },
+        {
+          "part": "ui",
+          "pin": "27"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "28"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "27"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "TP_INT",
+      "label": "TP_INT",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "29"
+        },
+        {
+          "part": "ui",
+          "pin": "26"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "29"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "26"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "LCD_BRIGHTNESS",
+      "label": "LCD_BRIGHTNESS",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "37"
+        },
+        {
+          "part": "ui",
+          "pin": "10"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "37"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "10"
+      },
+      "bus": "LCD",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "SERIAL_RX",
+      "label": "SERIAL_RX",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "49"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "49"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu"
+      ]
+    },
+    {
+      "id": "SERIAL_TX",
+      "label": "SERIAL_TX",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "48"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "48"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu"
+      ]
+    },
+    {
+      "id": "SERIAL_READY",
+      "label": "SERIAL_READY",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "47"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "47"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu"
+      ]
+    },
+    {
+      "id": "FPGA_READY",
+      "label": "FPGA_READY",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "45"
+        },
+        {
+          "part": "fpga",
+          "pin": "22"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "45"
+      },
+      "to": {
+        "part": "fpga",
+        "pin": "22"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-cpu",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "FPGA_RECONFIG",
+      "label": "FPGA_RECONFIG",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "44"
+        },
+        {
+          "part": "fpga",
+          "pin": "20"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "44"
+      },
+      "to": {
+        "part": "fpga",
+        "pin": "20"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-cpu",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "FPGA_DONE",
+      "label": "FPGA_DONE",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "43"
+        },
+        {
+          "part": "fpga",
+          "pin": "21"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "43"
+      },
+      "to": {
+        "part": "fpga",
+        "pin": "21"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-cpu",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "FPGA_SPI_CS",
+      "label": "FPGA_SPI_CS",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "42"
+        },
+        {
+          "part": "fpga",
+          "pin": "87"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "42"
+      },
+      "to": {
+        "part": "fpga",
+        "pin": "87"
+      },
+      "bus": "FPGA SPI",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-cpu",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "FPGA_SPI_MOSI",
+      "label": "FPGA_SPI_MOSI",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "41"
+        },
+        {
+          "part": "fpga",
+          "pin": "90"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "41"
+      },
+      "to": {
+        "part": "fpga",
+        "pin": "90"
+      },
+      "bus": "FPGA SPI",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-cpu",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "FPGA_SPI_CLK",
+      "label": "FPGA_SPI_CLK",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "40"
+        },
+        {
+          "part": "fpga",
+          "pin": "15"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "40"
+      },
+      "to": {
+        "part": "fpga",
+        "pin": "15"
+      },
+      "bus": "FPGA SPI",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-cpu",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "FPGA_SPI_MISO",
+      "label": "FPGA_SPI_MISO",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "39"
+        },
+        {
+          "part": "fpga",
+          "pin": "88"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "39"
+      },
+      "to": {
+        "part": "fpga",
+        "pin": "88"
+      },
+      "bus": "FPGA SPI",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-cpu",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "CPU_CLK_24MHZ",
+      "label": "CPU_CLK_24MHZ",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "51"
+        },
+        {
+          "part": "clock",
+          "pin": "3"
+        },
+        {
+          "part": "clock-link",
+          "pin": "1"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "51"
+      },
+      "to": {
+        "part": "clock",
+        "pin": "3"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu"
+      ]
+    },
+    {
+      "id": "LCD_D3",
+      "label": "LCD_D3",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "7"
+        },
+        {
+          "part": "ui",
+          "pin": "50"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "7"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "50"
+      },
+      "bus": "LCD",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "LCD_D4",
+      "label": "LCD_D4",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "8"
+        },
+        {
+          "part": "ui",
+          "pin": "49"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "8"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "49"
+      },
+      "bus": "LCD",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "LCD_D5",
+      "label": "LCD_D5",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "9"
+        },
+        {
+          "part": "ui",
+          "pin": "48"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "9"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "48"
+      },
+      "bus": "LCD",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "LCD_D6",
+      "label": "LCD_D6",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "10"
+        },
+        {
+          "part": "ui",
+          "pin": "47"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "10"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "47"
+      },
+      "bus": "LCD",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "LCD_D7",
+      "label": "LCD_D7",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "11"
+        },
+        {
+          "part": "ui",
+          "pin": "46"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "11"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "46"
+      },
+      "bus": "LCD",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "LCD_D10",
+      "label": "LCD_D10",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "12"
+        },
+        {
+          "part": "ui",
+          "pin": "44"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "12"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "44"
+      },
+      "bus": "LCD",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "LCD_D11",
+      "label": "LCD_D11",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "13"
+        },
+        {
+          "part": "ui",
+          "pin": "43"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "13"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "43"
+      },
+      "bus": "LCD",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "LCD_D12",
+      "label": "LCD_D12",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "14"
+        },
+        {
+          "part": "ui",
+          "pin": "42"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "14"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "42"
+      },
+      "bus": "LCD",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "LCD_D13",
+      "label": "LCD_D13",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "15"
+        },
+        {
+          "part": "ui",
+          "pin": "41"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "15"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "41"
+      },
+      "bus": "LCD",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "LCD_D14",
+      "label": "LCD_D14",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "16"
+        },
+        {
+          "part": "ui",
+          "pin": "40"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "16"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "40"
+      },
+      "bus": "LCD",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "LCD_D15",
+      "label": "LCD_D15",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "17"
+        },
+        {
+          "part": "ui",
+          "pin": "39"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "17"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "39"
+      },
+      "bus": "LCD",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "LCD_D19",
+      "label": "LCD_D19",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "19"
+        },
+        {
+          "part": "ui",
+          "pin": "37"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "19"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "37"
+      },
+      "bus": "LCD",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "LCD_D20",
+      "label": "LCD_D20",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "21"
+        },
+        {
+          "part": "ui",
+          "pin": "36"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "21"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "36"
+      },
+      "bus": "LCD",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "LCD_D21",
+      "label": "LCD_D21",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "23"
+        },
+        {
+          "part": "ui",
+          "pin": "35"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "23"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "35"
+      },
+      "bus": "LCD",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "LCD_D22",
+      "label": "LCD_D22",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "24"
+        },
+        {
+          "part": "ui",
+          "pin": "34"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "24"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "34"
+      },
+      "bus": "LCD",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "LCD_D23",
+      "label": "LCD_D23",
+      "endpoints": [
+        {
+          "part": "cpu",
+          "pin": "25"
+        },
+        {
+          "part": "ui",
+          "pin": "33"
+        }
+      ],
+      "from": {
+        "part": "cpu",
+        "pin": "25"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "33"
+      },
+      "bus": "LCD",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-cpu",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "TDO",
+      "label": "TDO",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "18"
+        },
+        {
+          "part": "jtag",
+          "pin": "1"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "18"
+      },
+      "to": {
+        "part": "jtag",
+        "pin": "1"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "TDI",
+      "label": "TDI",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "16"
+        },
+        {
+          "part": "jtag",
+          "pin": "2"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "16"
+      },
+      "to": {
+        "part": "jtag",
+        "pin": "2"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "TCK",
+      "label": "TCK",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "14"
+        },
+        {
+          "part": "jtag",
+          "pin": "3"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "14"
+      },
+      "to": {
+        "part": "jtag",
+        "pin": "3"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "TMS",
+      "label": "TMS",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "13"
+        },
+        {
+          "part": "jtag",
+          "pin": "4"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "13"
+      },
+      "to": {
+        "part": "jtag",
+        "pin": "4"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "KEY_SCAN_DATA",
+      "label": "KEY_SCAN_DATA",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "126"
+        },
+        {
+          "part": "ui",
+          "pin": "1"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "126"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "1"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "KEY_SCAN_RESET",
+      "label": "KEY_SCAN_RESET",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "125"
+        },
+        {
+          "part": "ui",
+          "pin": "2"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "125"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "2"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "KEY_SCAN_CLOCK",
+      "label": "KEY_SCAN_CLOCK",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "124"
+        },
+        {
+          "part": "ui",
+          "pin": "3"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "124"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "3"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "LED_CLOCK",
+      "label": "LED_CLOCK",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "122"
+        },
+        {
+          "part": "ui",
+          "pin": "4"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "122"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "4"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "LED_LOAD",
+      "label": "LED_LOAD",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "121"
+        },
+        {
+          "part": "ui",
+          "pin": "5"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "121"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "5"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "LED_DATA",
+      "label": "LED_DATA",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "120"
+        },
+        {
+          "part": "ui",
+          "pin": "6"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "120"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "6"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "K4_LED",
+      "label": "K4_LED",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "119"
+        },
+        {
+          "part": "ui",
+          "pin": "7"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "119"
+      },
+      "to": {
+        "part": "ui",
+        "pin": "7"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "FPGA_CLK_24MHZ",
+      "label": "FPGA_CLK_24MHZ",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "123"
+        },
+        {
+          "part": "clock-link",
+          "pin": "2"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "123"
+      },
+      "to": {
+        "part": "clock-link",
+        "pin": "2"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-cpu",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "EXT_TRIG",
+      "label": "EXT_TRIG",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "116"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "116"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "PROBE_CALIBRATION",
+      "label": "PROBE_CALIBRATION",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "115"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "115"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "CS_CLK",
+      "label": "CS_CLK",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "114"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "114"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "CS_LOAD",
+      "label": "CS_LOAD",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "113"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "113"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "CS_DATA",
+      "label": "CS_DATA",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "112"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "112"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "CHANNEL1_OFFSET_PWM",
+      "label": "CHANNEL1_OFFSET_PWM",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "110"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "110"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "CHANNEL2_OFFSET_PWM",
+      "label": "CHANNEL2_OFFSET_PWM",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "111"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "111"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "DAC_CLK",
+      "label": "DAC_CLK",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "141"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "141"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "DAC_D1",
+      "label": "DAC_D1",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "140"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "140"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "DAC_D2",
+      "label": "DAC_D2",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "139"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "139"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "DAC_D3",
+      "label": "DAC_D3",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "138"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "138"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "DAC_D4",
+      "label": "DAC_D4",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "137"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "137"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "DAC_D5",
+      "label": "DAC_D5",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "136"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "136"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "DAC_D6",
+      "label": "DAC_D6",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "135"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "135"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "DAC_D7",
+      "label": "DAC_D7",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "134"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "134"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "DAC_D8",
+      "label": "DAC_D8",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "133"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "133"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "DAC_D9",
+      "label": "DAC_D9",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "132"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "132"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "DAC_D10",
+      "label": "DAC_D10",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "131"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "131"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "DAC_D11",
+      "label": "DAC_D11",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "130"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "130"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "DAC_D12",
+      "label": "DAC_D12",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "129"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "129"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga"
+      ]
+    },
+    {
+      "id": "ADC_DI0_P",
+      "label": "ADC_DI0_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "32"
+        },
+        {
+          "part": "adc",
+          "pin": "102"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "32"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "102"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DI0_M",
+      "label": "ADC_DI0_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "33"
+        },
+        {
+          "part": "adc",
+          "pin": "101"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "33"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "101"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DI1_P",
+      "label": "ADC_DI1_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "34"
+        },
+        {
+          "part": "adc",
+          "pin": "100"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "34"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "100"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DI1_M",
+      "label": "ADC_DI1_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "35"
+        },
+        {
+          "part": "adc",
+          "pin": "99"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "35"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "99"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DI2_P",
+      "label": "ADC_DI2_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "38"
+        },
+        {
+          "part": "adc",
+          "pin": "96"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "38"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "96"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DI2_M",
+      "label": "ADC_DI2_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "39"
+        },
+        {
+          "part": "adc",
+          "pin": "95"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "39"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "95"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DI3_P",
+      "label": "ADC_DI3_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "40"
+        },
+        {
+          "part": "adc",
+          "pin": "94"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "40"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "94"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DI3_M",
+      "label": "ADC_DI3_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "41"
+        },
+        {
+          "part": "adc",
+          "pin": "93"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "41"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "93"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DI4_P",
+      "label": "ADC_DI4_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "42"
+        },
+        {
+          "part": "adc",
+          "pin": "92"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "42"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "92"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DI4_M",
+      "label": "ADC_DI4_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "43"
+        },
+        {
+          "part": "adc",
+          "pin": "91"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "43"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "91"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DI5_P",
+      "label": "ADC_DI5_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "44"
+        },
+        {
+          "part": "adc",
+          "pin": "90"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "44"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "90"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DI5_M",
+      "label": "ADC_DI5_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "45"
+        },
+        {
+          "part": "adc",
+          "pin": "89"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "45"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "89"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DI6_P",
+      "label": "ADC_DI6_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "46"
+        },
+        {
+          "part": "adc",
+          "pin": "86"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "46"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "86"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DI6_M",
+      "label": "ADC_DI6_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "47"
+        },
+        {
+          "part": "adc",
+          "pin": "85"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "47"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "85"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DI7_P",
+      "label": "ADC_DI7_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "48"
+        },
+        {
+          "part": "adc",
+          "pin": "84"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "48"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "84"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DI7_M",
+      "label": "ADC_DI7_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "49"
+        },
+        {
+          "part": "adc",
+          "pin": "83"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "49"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "83"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DID0_P",
+      "label": "ADC_DID0_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "3"
+        },
+        {
+          "part": "adc",
+          "pin": "125"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "3"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "125"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DID0_M",
+      "label": "ADC_DID0_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "4"
+        },
+        {
+          "part": "adc",
+          "pin": "124"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "4"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "124"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DID1_P",
+      "label": "ADC_DID1_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "6"
+        },
+        {
+          "part": "adc",
+          "pin": "123"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "6"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "123"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DID1_M",
+      "label": "ADC_DID1_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "7"
+        },
+        {
+          "part": "adc",
+          "pin": "122"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "7"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "122"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DID2_P",
+      "label": "ADC_DID2_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "9"
+        },
+        {
+          "part": "adc",
+          "pin": "118"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "9"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "118"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DID2_M",
+      "label": "ADC_DID2_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "10"
+        },
+        {
+          "part": "adc",
+          "pin": "117"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "10"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "117"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DID3_P",
+      "label": "ADC_DID3_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "11"
+        },
+        {
+          "part": "adc",
+          "pin": "116"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "11"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "116"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DID3_M",
+      "label": "ADC_DID3_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "12"
+        },
+        {
+          "part": "adc",
+          "pin": "115"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "12"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "115"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DID4_P",
+      "label": "ADC_DID4_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "23"
+        },
+        {
+          "part": "adc",
+          "pin": "114"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "23"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "114"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DID4_M",
+      "label": "ADC_DID4_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "24"
+        },
+        {
+          "part": "adc",
+          "pin": "113"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "24"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "113"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DID5_P",
+      "label": "ADC_DID5_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "25"
+        },
+        {
+          "part": "adc",
+          "pin": "112"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "25"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "112"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DID5_M",
+      "label": "ADC_DID5_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "26"
+        },
+        {
+          "part": "adc",
+          "pin": "111"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "26"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "111"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DID6_P",
+      "label": "ADC_DID6_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "27"
+        },
+        {
+          "part": "adc",
+          "pin": "106"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "27"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "106"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DID6_M",
+      "label": "ADC_DID6_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "28"
+        },
+        {
+          "part": "adc",
+          "pin": "105"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "28"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "105"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DID7_P",
+      "label": "ADC_DID7_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "29"
+        },
+        {
+          "part": "adc",
+          "pin": "104"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "29"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "104"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DID7_M",
+      "label": "ADC_DID7_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "30"
+        },
+        {
+          "part": "adc",
+          "pin": "103"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "30"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "103"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQ0_P",
+      "label": "ADC_DQ0_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "71"
+        },
+        {
+          "part": "adc",
+          "pin": "58"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "71"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "58"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQ0_M",
+      "label": "ADC_DQ0_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "70"
+        },
+        {
+          "part": "adc",
+          "pin": "59"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "70"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "59"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQ1_P",
+      "label": "ADC_DQ1_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "69"
+        },
+        {
+          "part": "adc",
+          "pin": "60"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "69"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "60"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQ1_M",
+      "label": "ADC_DQ1_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "68"
+        },
+        {
+          "part": "adc",
+          "pin": "61"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "68"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "61"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQ2_P",
+      "label": "ADC_DQ2_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "67"
+        },
+        {
+          "part": "adc",
+          "pin": "65"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "67"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "65"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQ2_M",
+      "label": "ADC_DQ2_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "66"
+        },
+        {
+          "part": "adc",
+          "pin": "66"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "66"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "66"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQ3_P",
+      "label": "ADC_DQ3_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "65"
+        },
+        {
+          "part": "adc",
+          "pin": "67"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "65"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "67"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQ3_M",
+      "label": "ADC_DQ3_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "64"
+        },
+        {
+          "part": "adc",
+          "pin": "68"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "64"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "68"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQ4_P",
+      "label": "ADC_DQ4_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "63"
+        },
+        {
+          "part": "adc",
+          "pin": "69"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "63"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "69"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQ4_M",
+      "label": "ADC_DQ4_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "62"
+        },
+        {
+          "part": "adc",
+          "pin": "70"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "62"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "70"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQ5_P",
+      "label": "ADC_DQ5_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "61"
+        },
+        {
+          "part": "adc",
+          "pin": "71"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "61"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "71"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQ5_M",
+      "label": "ADC_DQ5_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "60"
+        },
+        {
+          "part": "adc",
+          "pin": "72"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "60"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "72"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQ6_P",
+      "label": "ADC_DQ6_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "59"
+        },
+        {
+          "part": "adc",
+          "pin": "75"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "59"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "75"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQ6_M",
+      "label": "ADC_DQ6_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "58"
+        },
+        {
+          "part": "adc",
+          "pin": "76"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "58"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "76"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQ7_P",
+      "label": "ADC_DQ7_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "57"
+        },
+        {
+          "part": "adc",
+          "pin": "77"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "57"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "77"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQ7_M",
+      "label": "ADC_DQ7_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "56"
+        },
+        {
+          "part": "adc",
+          "pin": "78"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "56"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "78"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQD0_P",
+      "label": "ADC_DQD0_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "102"
+        },
+        {
+          "part": "adc",
+          "pin": "36"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "102"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "36"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQD0_M",
+      "label": "ADC_DQD0_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "101"
+        },
+        {
+          "part": "adc",
+          "pin": "37"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "101"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "37"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQD1_P",
+      "label": "ADC_DQD1_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "100"
+        },
+        {
+          "part": "adc",
+          "pin": "38"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "100"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "38"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQD1_M",
+      "label": "ADC_DQD1_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "99"
+        },
+        {
+          "part": "adc",
+          "pin": "39"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "99"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "39"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQD2_P",
+      "label": "ADC_DQD2_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "98"
+        },
+        {
+          "part": "adc",
+          "pin": "43"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "98"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "43"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQD2_M",
+      "label": "ADC_DQD2_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "97"
+        },
+        {
+          "part": "adc",
+          "pin": "44"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "97"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "44"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQD3_P",
+      "label": "ADC_DQD3_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "96"
+        },
+        {
+          "part": "adc",
+          "pin": "45"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "96"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "45"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQD3_M",
+      "label": "ADC_DQD3_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "95"
+        },
+        {
+          "part": "adc",
+          "pin": "46"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "95"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "46"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQD4_P",
+      "label": "ADC_DQD4_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "94"
+        },
+        {
+          "part": "adc",
+          "pin": "47"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "94"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "47"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQD4_M",
+      "label": "ADC_DQD4_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "93"
+        },
+        {
+          "part": "adc",
+          "pin": "48"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "93"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "48"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQD5_P",
+      "label": "ADC_DQD5_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "84"
+        },
+        {
+          "part": "adc",
+          "pin": "49"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "84"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "49"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQD5_M",
+      "label": "ADC_DQD5_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "83"
+        },
+        {
+          "part": "adc",
+          "pin": "50"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "83"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "50"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQD6_P",
+      "label": "ADC_DQD6_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "80"
+        },
+        {
+          "part": "adc",
+          "pin": "54"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "80"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "54"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQD6_M",
+      "label": "ADC_DQD6_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "79"
+        },
+        {
+          "part": "adc",
+          "pin": "55"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "79"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "55"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQD7_P",
+      "label": "ADC_DQD7_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "78"
+        },
+        {
+          "part": "adc",
+          "pin": "56"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "78"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "56"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DQD7_M",
+      "label": "ADC_DQD7_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "76"
+        },
+        {
+          "part": "adc",
+          "pin": "57"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "76"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "57"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DCLK_P",
+      "label": "ADC_DCLK_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "50"
+        },
+        {
+          "part": "adc",
+          "pin": "82"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "50"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "82"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_DCLK_M",
+      "label": "ADC_DCLK_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "51"
+        },
+        {
+          "part": "adc",
+          "pin": "81"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "51"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "81"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_OR_P",
+      "label": "ADC_OR_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "54"
+        },
+        {
+          "part": "adc",
+          "pin": "79"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "54"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "79"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_OR_M",
+      "label": "ADC_OR_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "52"
+        },
+        {
+          "part": "adc",
+          "pin": "80"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "52"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "80"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_CLK_P",
+      "label": "ADC_CLK_P",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "106"
+        },
+        {
+          "part": "adc",
+          "pin": "18"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "106"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "18"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "ADC_CLK_M",
+      "label": "ADC_CLK_M",
+      "endpoints": [
+        {
+          "part": "fpga",
+          "pin": "105"
+        },
+        {
+          "part": "adc",
+          "pin": "19"
+        }
+      ],
+      "from": {
+        "part": "fpga",
+        "pin": "105"
+      },
+      "to": {
+        "part": "adc",
+        "pin": "19"
+      },
+      "bus": "ADC LVDS",
+      "status": "family-reference",
+      "source_ids": [
+        "gowin",
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "CHANNEL1_IN_M",
+      "label": "CHANNEL1_IN_M",
+      "endpoints": [
+        {
+          "part": "adc",
+          "pin": "10"
+        }
+      ],
+      "from": {
+        "part": "adc",
+        "pin": "10"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "CHANNEL1_IN_P",
+      "label": "CHANNEL1_IN_P",
+      "endpoints": [
+        {
+          "part": "adc",
+          "pin": "11"
+        }
+      ],
+      "from": {
+        "part": "adc",
+        "pin": "11"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "CHANNEL2_IN_P",
+      "label": "CHANNEL2_IN_P",
+      "endpoints": [
+        {
+          "part": "adc",
+          "pin": "22"
+        }
+      ],
+      "from": {
+        "part": "adc",
+        "pin": "22"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "CHANNEL2_IN_M",
+      "label": "CHANNEL2_IN_M",
+      "endpoints": [
+        {
+          "part": "adc",
+          "pin": "23"
+        }
+      ],
+      "from": {
+        "part": "adc",
+        "pin": "23"
+      },
+      "to": null,
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-fpga",
+        "ti-adc"
+      ]
+    },
+    {
+      "id": "REAR_VBUS",
+      "label": "REAR_VBUS",
+      "endpoints": [
+        {
+          "part": "rear-usb",
+          "pin": "1"
+        }
+      ],
+      "from": {
+        "part": "rear-usb",
+        "pin": "1"
+      },
+      "to": null,
+      "bus": "USB",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "REAR_DM",
+      "label": "REAR_DM",
+      "endpoints": [
+        {
+          "part": "rear-usb",
+          "pin": "2"
+        },
+        {
+          "part": "r29",
+          "pin": "2"
+        }
+      ],
+      "from": {
+        "part": "rear-usb",
+        "pin": "2"
+      },
+      "to": {
+        "part": "r29",
+        "pin": "2"
+      },
+      "bus": "USB",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "REAR_DP",
+      "label": "REAR_DP",
+      "endpoints": [
+        {
+          "part": "rear-usb",
+          "pin": "3"
+        },
+        {
+          "part": "r30",
+          "pin": "2"
+        }
+      ],
+      "from": {
+        "part": "rear-usb",
+        "pin": "3"
+      },
+      "to": {
+        "part": "r30",
+        "pin": "2"
+      },
+      "bus": "USB",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "GND",
+      "label": "GND",
+      "endpoints": [
+        {
+          "part": "rear-usb",
+          "pin": "4"
+        },
+        {
+          "part": "front-usb",
+          "pin": "4"
+        }
+      ],
+      "from": {
+        "part": "rear-usb",
+        "pin": "4"
+      },
+      "to": {
+        "part": "front-usb",
+        "pin": "4"
+      },
+      "bus": "Other",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "FRONT_VBUS",
+      "label": "FRONT_VBUS",
+      "endpoints": [
+        {
+          "part": "front-usb",
+          "pin": "1"
+        }
+      ],
+      "from": {
+        "part": "front-usb",
+        "pin": "1"
+      },
+      "to": null,
+      "bus": "USB",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "FRONT_DM",
+      "label": "FRONT_DM",
+      "endpoints": [
+        {
+          "part": "front-usb",
+          "pin": "2"
+        },
+        {
+          "part": "r908",
+          "pin": "2"
+        }
+      ],
+      "from": {
+        "part": "front-usb",
+        "pin": "2"
+      },
+      "to": {
+        "part": "r908",
+        "pin": "2"
+      },
+      "bus": "USB",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-io"
+      ]
+    },
+    {
+      "id": "FRONT_DP",
+      "label": "FRONT_DP",
+      "endpoints": [
+        {
+          "part": "front-usb",
+          "pin": "3"
+        },
+        {
+          "part": "r909",
+          "pin": "2"
+        }
+      ],
+      "from": {
+        "part": "front-usb",
+        "pin": "3"
+      },
+      "to": {
+        "part": "r909",
+        "pin": "2"
+      },
+      "bus": "USB",
+      "status": "family-reference",
+      "source_ids": [
+        "schematic-io"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "schematic-cpu",
+      "title": "DSO2D10 rev 1.0 \u00b7 Processor \u00b7 printed 1/8 (PDF 2)",
+      "url": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=2",
+      "scope": "Related-family reference, 2022-06-23; not the connected board",
+      "sha256": "dfbb91aedfa987f6d5cfc9ed3e7d05ef8b343e489056da2de88d9721ac5d7f3d"
+    },
+    {
+      "id": "schematic-fpga",
+      "title": "DSO2D10 rev 1.0 \u00b7 FPGA / ADC \u00b7 printed 2/8 (PDF 1)",
+      "url": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=1",
+      "scope": "Related-family reference, 2022-06-21"
+    },
+    {
+      "id": "schematic-io",
+      "title": "DSO2D10 rev 1.0 \u00b7 External interfaces \u00b7 printed 7/8 (PDF 4)",
+      "url": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=4",
+      "scope": "Related-family reference, 2022-06-29"
+    },
+    {
+      "id": "schematic-power",
+      "title": "DSO2D10 rev 1.0 \u00b7 Power \u00b7 printed 8/8 (PDF 3)",
+      "url": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=3",
+      "scope": "Related-family reference; component inventory only"
+    },
+    {
+      "id": "schematic-control",
+      "title": "DSO2D10 rev 1.0 \u00b7 Control \u00b7 printed 3/8 (PDF 6)",
+      "url": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=6",
+      "scope": "Related-family reference; component inventory only"
+    },
+    {
+      "id": "schematic-awg",
+      "title": "DSO2D10 rev 1.0 \u00b7 Waveform generator \u00b7 printed 6/8 (PDF 5)",
+      "url": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=5",
+      "scope": "Related-family reference; component inventory only"
+    },
+    {
+      "id": "schematic-ch1",
+      "title": "DSO2D10 rev 1.0 \u00b7 Channel 1 \u00b7 printed 4/8 (PDF 7)",
+      "url": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=7",
+      "scope": "Related-family reference; component inventory only"
+    },
+    {
+      "id": "schematic-ch2",
+      "title": "DSO2D10 rev 1.0 \u00b7 Channel 2 \u00b7 printed 5/8 (PDF 8)",
+      "url": "https://uglyduck.vajn.icu/PDF/Hantek/Hantek_DSO2D10_Main_Board_sch.pdf#page=8",
+      "scope": "Related-family reference; component inventory only"
+    },
+    {
+      "id": "teardown",
+      "title": "Andrew / featherbear \u00b7 exact-model DSO2D15 teardown \u00b7 2021",
+      "url": "https://blog0.featherbear.cc/post/hantek-dso2d15/",
+      "scope": "A different DSO2D15 unit; visible enclosure/board photographs; not a layer stack or readable vendor identification"
+    },
+    {
+      "id": "manufacturer",
+      "title": "Hantek DSO2000 series manufacturer reference",
+      "url": "https://www.hantek.com/m/productdetail/17182",
+      "scope": "Published enclosure dimensions; photo-informed ports are approximate"
+    },
+    {
+      "id": "gowin",
+      "title": "Gowin official software guide \u00b7 GW2AR family",
+      "url": "https://www.gowinsemi.com/upload/database_doc/1/document/5bfcfcab42d1c.pdf",
+      "scope": "Toolchain identity for the reference FPGA; no physical device IDCODE obtained"
+    },
+    {
+      "id": "ti-adc",
+      "title": "Texas Instruments \u00b7 ADC08D500 official component reference",
+      "url": "https://www.ti.com/product/ADC08D500",
+      "scope": "Manufacturer / parallel LVDS / 128-pin HLQFP package family; not connected-unit marking verification"
+    },
+    {
+      "id": "ti-dac",
+      "title": "Texas Instruments \u00b7 DAC902 official component reference",
+      "url": "https://www.ti.com/product/DAC902",
+      "scope": "12-bit DAC component family; exact connected-unit package unverified"
+    },
+    {
+      "id": "ti-diff",
+      "title": "Texas Instruments \u00b7 LMH6551 official component reference",
+      "url": "https://www.ti.com/product/LMH6551",
+      "scope": "Differential ADC driver family; exact installed-unit manufacturer markings unverified"
+    }
+  ],
+  "observations": [],
+  "photos": [
+    {
+      "title": "Opened case / power assembly",
+      "url": "https://blog0.featherbear.cc/uploads/20211031-20210826_184237.jpg",
+      "source_id": "teardown"
+    },
+    {
+      "title": "Power board and chassis",
+      "url": "https://blog0.featherbear.cc/uploads/20211031-20210826_184359.jpg",
+      "source_id": "teardown"
+    },
+    {
+      "title": "Main board in chassis",
+      "url": "https://blog0.featherbear.cc/uploads/20211031-20210826_184642.jpg",
+      "source_id": "teardown"
+    },
+    {
+      "title": "Main-board component close-up",
+      "url": "https://blog0.featherbear.cc/uploads/20211031-20210826_184758.jpg",
+      "source_id": "teardown"
+    },
+    {
+      "title": "Second component close-up",
+      "url": "https://blog0.featherbear.cc/uploads/20211031-20210826_184809.jpg",
+      "source_id": "teardown"
+    }
+  ],
+  "geometry": {
+    "kind": "simplified procedural exterior",
+    "dimensions_mm": [
+      318,
+      150,
+      110
+    ],
+    "source_ids": [
+      "manufacturer",
+      "teardown"
+    ],
+    "basis": "Published 318 \u00d7 150 \u00d7 110 mm envelope and simplified enclosure geometry. Ports are approximate; no measured internal PCB or hidden routing is represented."
+  }
+}

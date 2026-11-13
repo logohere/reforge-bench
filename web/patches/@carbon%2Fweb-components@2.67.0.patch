@@ -1,0 +1,38 @@
+diff --git a/es/components/radio-button/radio-button-group.js b/es/components/radio-button/radio-button-group.js
+index 64f1f14ad718fa6a88b895614dc8978aca37c287..c5bed23a6bd6a504e6f8f1dce104aa3bd34ba87f 100644
+--- a/es/components/radio-button/radio-button-group.js
++++ b/es/components/radio-button/radio-button-group.js
+@@ -136,6 +136,7 @@ let CDSRadioButtonGroup = class CDSRadioButtonGroup extends FormMixin(HostListen
+ 			[`cds--radio-button-group--slug`]: hasAILabel
+ 		});
+ 		return html` <fieldset
++        role="radiogroup"
+         class="${fieldsetClasses}"
+         ?disabled="${disabled}"
+         aria-describedby="${ifDefined(describedBy)}"
+diff --git a/es/components/radio-button/radio-button.js b/es/components/radio-button/radio-button.js
+index 07d79be1e6190908aa54f7d5122818eaa58b53c6..27e1e224648e71a7c756986a3a85ea578d69e685 100644
+--- a/es/components/radio-button/radio-button.js
++++ b/es/components/radio-button/radio-button.js
+@@ -171,6 +171,13 @@ let CDSRadioButton = class CDSRadioButton extends HostListenerMixin(FocusMixin(L
+ 		hasContent[0].setAttribute("size", type === "inline" ? "md" : "mini");
+ 		this.requestUpdate();
+ 	}
++	connectedCallback() {
++		super.connectedCallback();
++		if (this._radioButtonDelegate) {
++			this._manager = RadioGroupManager.get(this.getRootNode({ composed: true }));
++			this._manager.add(this._radioButtonDelegate);
++		}
++	}
+ 	disconnectedCallback() {
+ 		if (this._manager) this._manager.delete(this._radioButtonDelegate);
+ 		super.disconnectedCallback();
+@@ -229,7 +236,6 @@ let CDSRadioButton = class CDSRadioButton extends HostListenerMixin(FocusMixin(L
+         .checked=${checked}
+         ?disabled="${disabledItem || disabled}"
+         ?required=${this.required}
+-        aria-readonly="${String(readOnly)}"
+         name=${ifDefined(name)}
+         value=${ifDefined(value)} />
+       <label

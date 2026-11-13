@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "tick": 0,
+  "source": "recorded",
+  "machine": {
+    "x_mm": null,
+    "z_mm": null,
+    "spindle_rpm": null,
+    "program_state": "not_connected"
+  },
+  "instruments": [
+    {
+      "device_id": "scope-example",
+      "captured_at_ms": null,
+      "stale": true,
+      "units": "Hz"
+    }
+  ],
+  "warnings": [
+    "Recorded summary only; voltage conversion and absolute calibration are unqualified."
+  ]
+}

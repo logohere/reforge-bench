@@ -1,0 +1,19 @@
+{
+  "name": "reforge-bench-tooling",
+  "version": "0.1.0-alpha.1",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "model:refresh": "node scripts/prepare-model.mjs && dotdog refresh --json",
+    "model:check": "node scripts/prepare-model.mjs && dotdog validate specs && dotdog check --json && dotdog path file:crates/bench-core/schemas/snapshot.json BenchSnapshot --direction outgoing --verb documents && dotdog path file:crates/bench-core/src/diagnostics.rs DiagnosticReport --direction outgoing --verb tests",
+    "model:query": "dotdog query",
+    "model:trace": "dotdog trace",
+    "model:path": "dotdog path"
+  },
+  "dependencies": {
+    "dotdog": "1.0.0"
+  }
+}

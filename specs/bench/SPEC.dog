@@ -1,0 +1,38 @@
+# Reforge Bench
+
+## Product
+
+A hardware and firmware workbench with a shared machine/instrument state contract.
+User data and analysis providers are separate from the state model.
+
+## Architecture
+
+| Component | Role |
+| --- | --- |
+| BenchSnapshot | Shared machine/instrument state contract |
+| MachineState | Known or unavailable machine measurements |
+| InstrumentState | Device sample identity and freshness |
+| Diagnostics | Bounded private records and metadata-only reports |
+| DiagnosticEvent / Failure | Typed local failure context, not directly serializable |
+| DiagnosticReport | Typed, serializable allowlisted metadata |
+| Command | Typed, local read-only CLI actions |
+
+## Contract
+
+- Source provenance is simulated, recorded or producer-declared live.
+- Missing numeric measurements are null, not zero.
+- Numeric measurements must be finite; spindle speed must be non-negative.
+- Snapshot validation does not authenticate transport or qualify measurements.
+
+## Example
+
+The curated hardware/REA case under crates/bench-cli/examples/hardware-rea/ contains
+selected factual observations and recorded aggregate measurements, not synthetic
+signals or raw firmware/captures. Its provenance is recorded_summary, not live.
+It requires no device access or external tool installation to read.
+
+## Verification
+
+The Rust tests cover snapshot validity, diagnostic bounds/deduplication and
+private-text exclusion from shared reports. The graph does not prove runtime or
+hardware coverage.

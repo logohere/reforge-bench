@@ -1,0 +1,14 @@
+title = "Reforge Bench publication checks"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "personal-home-path"
+description = "Machine-specific home directory in distributable content"
+regex = '''(?i)(?:(?:/Users/|/home/)[A-Za-z0-9._-]+/|[A-Za-z]:[\\/]Users[\\/][A-Za-z0-9._-]+[\\/])'''
+
+[[rules]]
+id = "private-lan-address"
+description = "Private network address in distributable content"
+regex = '''\b(?:192\.168\.[0-9]{1,3}\.[0-9]{1,3}|10\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}|172\.(?:1[6-9]|2[0-9]|3[01])\.[0-9]{1,3}\.[0-9]{1,3})\b'''

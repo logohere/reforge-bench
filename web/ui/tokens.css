@@ -1,0 +1,27 @@
+:root{
+  color-scheme:dark;
+  --rb-space-1:2px;--rb-space-2:4px;--rb-space-3:8px;--rb-space-4:12px;--rb-space-5:16px;--rb-space-6:24px;--rb-space-7:32px;--rb-space-8:48px;--rb-space-9:64px;
+  --rb-font-ui:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --rb-font-code:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  --rb-text-body:16px;--rb-text-secondary:14px;--rb-text-caption:13px;--rb-text-title:24px;--rb-text-display:32px;
+  --rb-color-canvas:#111315;--rb-color-surface:#1a1d20;--rb-color-raised:#2a2e33;--rb-color-field:#14171a;
+  --rb-color-document:#ffffff;
+  --rb-color-text:#f0f2f4;--rb-color-secondary:#bec5cd;--rb-color-tertiary:#9faab6;--rb-color-border:#3e464f;--rb-color-control-edge:#798795;--rb-color-divider:#30373e;
+  --rb-color-hover:#343b43;--rb-color-selected:#2b3d4e;--rb-color-selection-edge:#91bce4;--rb-color-focus:#9ccaff;
+  --rb-color-action:#edab75;--rb-color-action-hover:#f6bc8c;--rb-color-on-action:#171b20;
+  --rb-color-info:#bbdcff;--rb-color-info-bg:#21364b;--rb-color-info-edge:#436586;
+  --rb-color-success:#afe3c4;--rb-color-success-bg:#203b2f;--rb-color-success-edge:#426d55;
+  --rb-color-warning:#f4d19b;--rb-color-warning-bg:#3c3020;--rb-color-warning-edge:#82663e;
+  --rb-color-danger:#ffbdb4;--rb-color-danger-bg:#422725;--rb-color-danger-edge:#9c605a;
+  --rb-nc-command:#ffad78;--rb-nc-axis:#86caff;--rb-nc-arc:#74d9c5;--rb-nc-feed:#efce7b;--rb-nc-tool:#d6b0ff;--rb-nc-comment:#9faab6;
+  --rb-code-keyword:#d6b0ff;--rb-code-type:#86caff;--rb-code-number:#efce7b;--rb-code-string:#74d9c5;
+  --rb-radius-control:4px;--rb-radius-panel:4px;--rb-radius-dialog:8px;
+  --rb-control-height:40px;--rb-control-compact:32px;--rb-control-primary:44px;
+  --rb-target-min:44px;--rb-timeline-dot-size:16px;--rb-timeline-dot-max:20px;--rb-timeline-cluster-size:28px;
+  --rb-shell-height:52px;--rb-context-height:44px;--rb-nav-width:192px;--rb-nav-rail-width:56px;--rb-gutter:24px;--rb-gap:16px;
+  --rb-color-scrim:#070b10a6;--rb-color-cursor:#c9d9e899;--rb-color-cursor-halo:#d3e6f315;--rb-chart-1:#9fc8eb;--rb-chart-2:#c0b3e5;--rb-chart-3:#efc58e;--rb-chart-4:#a8d6b5;--rb-chart-5:#ecb2af;--rb-chart-6:#aad7db;
+  --rb-motion-fast:120ms;--rb-shadow-dialog:0 24px 80px #0008;
+}
+@media(prefers-contrast:more){:root{--rb-color-secondary:#d6e0e9;--rb-color-tertiary:#c5d1dd;--rb-color-border:#8494a5;--rb-color-divider:#68798b}}
+body[data-contrast=more]{--rb-color-secondary:#d6e0e9;--rb-color-tertiary:#c5d1dd;--rb-color-border:#8494a5;--rb-color-divider:#68798b}
+@media(prefers-reduced-motion:reduce){:root{--rb-motion-fast:0ms}}

@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "tool": "Icarus Verilog version 13.0 (stable) (v13_0)",
+  "sourceSha256": {
+    "web/hardware/pulse_loop.v": "ea26a8a84351beeac78ce04d719000404c9575fe0343a29dc81ecf6ee2ced776",
+    "web/hardware/pulse_loop_tb.v": "5de564df2bae406c58e47298a6a708203c8cfa4349b6efe7b3ace4a3abec2ada",
+    "web/hardware/pulse_loop.xdc": "2192ccded1ddaf8c255b5efaa93f456907532deeebf866ec6f12c42b3a90da30",
+    "web/hardware/pulse_source.py": "da737eef5c6a547802e3a572e7fde000a5c1f1cefa11bf7d66e54b4db5a9c3ba",
+    "web/hardware/sensor_source.py": "980113bf871ca9da9cd0d90445bbe925167f1a81d183e383814715450fdd3ce9"
+  },
+  "result": "PASS: 1000-edge division, no early toggle, held-high input, watchdog, recovery, reset\nweb/hardware/pulse_loop_tb.v:42: $finish called at 177288000 (1ps)",
+  "scope": "Icarus RTL logic simulation only, using a shortened watchdog for the testbench. No Vivado synthesis, timing/CDC closure, bitstream generation, Pico runtime, board programming, physical pin continuity or instrument capture verified."
+}

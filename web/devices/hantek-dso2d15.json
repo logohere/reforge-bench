@@ -1,0 +1,13 @@
+{
+  "schema": "rea-device-project/1",
+  "id": "hantek-dso2d15",
+  "name": "Hantek DSO2D15 example",
+  "canonical_case_id": "86a8fd7c51708c0e29a086f7b029212c10eff0a42f2a6d79474ae8aad0bd97d7",
+  "case_ids": [
+    "86a8fd7c51708c0e29a086f7b029212c10eff0a42f2a6d79474ae8aad0bd97d7"
+  ],
+  "manifest": "/devices/hantek-dso2d15.json",
+  "hardware_url": "/hardware/hantek-hardware.json",
+  "analyses": [],
+  "maps": []
+}

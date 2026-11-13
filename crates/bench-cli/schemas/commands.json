@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Reforge Bench local command",
+  "description": "Commands accepted by --request FILE. These read local files; they do not control a running desktop or hardware. JSON input files are limited to 1 MiB.",
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["command"],
+      "properties": {
+        "command": {"const": "demo"},
+        "json": {"type": "boolean", "default": false}
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["command", "path"],
+      "properties": {
+        "command": {"const": "validate-snapshot"},
+        "path": {"type": "string"},
+        "json": {"type": "boolean", "default": false}
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["command", "path"],
+      "properties": {
+        "command": {"const": "diagnostics"},
+        "path": {"type": "string"}
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["command"],
+      "properties": {
+        "command": {"const": "schema"},
+        "kind": {"enum": ["commands", "snapshot", "diagnostics"], "default": "commands"}
+      }
+    }
+  ]
+}

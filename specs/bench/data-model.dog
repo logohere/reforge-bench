@@ -1,0 +1,539 @@
+# Bench snapshot contract
+
+## Entities
+
+### Entity: BenchSnapshot
+
+Implementation: crates/bench-core/src/lib.rs.
+
+```yaml
+entity: BenchSnapshot
+type: entity
+properties:
+  schema_version:
+    type: integer
+    required: true
+  tick:
+    type: integer
+    required: true
+  source:
+    type: enum
+    required: true
+    values: [simulated, recorded, live]
+  machine:
+    type: object
+    required: true
+  instruments:
+    type: array
+    required: true
+  warnings:
+    type: array
+    required: true
+```
+
+### Entity: MachineState
+
+Unavailable measurements remain null, not zero. Spindle speed must be non-negative.
+
+```yaml
+entity: MachineState
+type: entity
+properties:
+  x_mm:
+    type: number
+    required: false
+  z_mm:
+    type: number
+    required: false
+  spindle_rpm:
+    type: number
+    required: false
+  program_state:
+    type: string
+    required: true
+```
+
+### Entity: InstrumentState
+
+```yaml
+entity: InstrumentState
+type: entity
+properties:
+  device_id:
+    type: string
+    required: true
+  captured_at_ms:
+    type: integer
+    required: false
+  stale:
+    type: boolean
+    required: true
+  units:
+    type: string
+    required: false
+```
+
+### Entity: Diagnostics
+
+Implementation: crates/bench-core/src/diagnostics.rs. Local records retain bounded
+details. This is an in-memory store, not a deserializable document. Shared output
+excludes free text, routes, paths and session identifiers.
+
+```yaml
+entity: Diagnostics
+type: entity
+properties:
+  events:
+    type: array
+    required: true
+  sequence:
+    type: integer
+    required: true
+```
+
+### Entity: Command
+
+Implementation: crates/bench-cli/src/main.rs. The command schema is
+crates/bench-cli/schemas/commands.json. Commands read local files, not live app state.
+
+```yaml
+entity: Command
+type: entity
+properties:
+  command:
+    type: enum
+    required: true
+    values: [demo, validate-snapshot, diagnostics, schema]
+  path:
+    type: string
+    required: false
+  json:
+    type: boolean
+    required: false
+  kind:
+    type: enum
+    required: false
+    values: [commands, snapshot, diagnostics]
+```
+
+### Entity: DiagnosticEvent
+
+```yaml
+entity: DiagnosticEvent
+type: entity
+description: Private local record in crates/bench-core/src/diagnostics.rs; not serializable.
+properties:
+  id:
+    type: string
+    required: true
+  count:
+    type: integer
+    required: true
+  last_ms:
+    type: integer
+    required: true
+  elapsed_ms:
+    type: integer
+    required: false
+  failure:
+    type: object
+    required: true
+```
+
+### Entity: Failure
+
+```yaml
+entity: Failure
+type: entity
+description: Rust enum with Client, Application and Transfer variants; private local details.
+```
+
+### Entity: DiagnosticReport
+
+```yaml
+entity: DiagnosticReport
+type: entity
+description: Serializable metadata-only report; operation is a closed ReportOperation enum, not private text.
+properties:
+  schema:
+    type: string
+    required: true
+  events:
+    type: array
+    required: true
+```
+
+```yaml
+entity: NativeWorkspace
+type: entity
+```
+
+```yaml
+entity: HardwareBench
+type: entity
+```
+
+```yaml
+entity: LocalProvider
+type: entity
+```
+
+```yaml
+entity: InspectorRequest
+type: entity
+```
+```yaml
+entity: file:experiments/rune/crates/cnc-ui-rune/src/workspace.rs
+type: file
+```
+
+```yaml
+entity: file:experiments/rune/crates/cnc-ui-rune/src/provider.rs
+type: file
+```
+
+```yaml
+entity: file:web/hardware/tabletop.js
+type: file
+```
+
+```yaml
+entity: file:experiments/rune/crates/cnc-ui-rune/src/agent_debug.rs
+type: file
+```
+
+```yaml
+entity: file:experiments/rune/schemas/inspector.json
+type: file
+```
+
+```yaml
+entity: file:docs/desktop.md
+type: file
+```
+
+```yaml
+entity: EvidenceMap
+type: entity
+```
+
+```yaml
+entity: file:experiments/rune/crates/cnc-ui-rune/src/dotdog.rs
+type: file
+```
+
+```yaml
+entity: file:docs/rea-maps.md
+type: file
+```
+
+## Relationships
+
+```yaml
+entity: EquipmentList
+type: entity
+properties:
+  schema:
+    type: string
+    required: true
+  name:
+    type: string
+    required: true
+  devices:
+    type: array
+    required: true
+```
+
+```yaml
+entity: file:web/hardware/equipment-config.js
+type: file
+```
+
+```yaml
+entity: file:web/hardware/equipment.schema.json
+type: file
+```
+
+```yaml
+entity: file:web/hardware/equipment-config.test.js
+type: file
+```
+
+```yaml
+source: file:web/hardware/equipment-config.js
+target: EquipmentList
+verb: defines
+```
+
+```yaml
+source: file:web/hardware/equipment.schema.json
+target: EquipmentList
+verb: documents
+```
+
+```yaml
+source: file:web/hardware/equipment-config.test.js
+target: EquipmentList
+verb: tests
+```
+
+```yaml
+source: HardwareBench
+target: EquipmentList
+verb: uses
+```
+
+The file nodes below bind authored contracts to implementation, format and test
+files. They are not automatically extracted Rust symbols or execution evidence.
+
+```yaml
+entity: file:crates/bench-core/src/lib.rs
+type: file
+description: Snapshot definitions, validation and unit tests.
+```
+
+```yaml
+entity: file:crates/bench-core/src/diagnostics.rs
+type: file
+description: Diagnostic definitions, export boundaries and unit tests.
+```
+
+```yaml
+entity: file:crates/bench-cli/src/main.rs
+type: file
+description: CLI parsing and execution.
+```
+
+```yaml
+entity: file:crates/bench-core/schemas/snapshot.json
+type: file
+description: Snapshot interchange format.
+```
+
+```yaml
+entity: file:crates/bench-core/schemas/client-errors.json
+type: file
+description: Client-error input format, not the shared report format.
+```
+
+```yaml
+entity: file:crates/bench-cli/schemas/commands.json
+type: file
+description: JSON command request format.
+```
+
+```yaml
+entity: file:crates/bench-cli/tests/cli.rs
+type: file
+description: Executable CLI integration checks.
+```
+
+### Relationship: BenchSnapshot → MachineState
+
+```yaml
+source: BenchSnapshot
+target: MachineState
+verb: records
+cardinality: 1:1
+```
+
+### Relationship: BenchSnapshot → InstrumentState
+
+```yaml
+source: BenchSnapshot
+target: InstrumentState
+verb: includes
+cardinality: 1:N
+```
+
+### Relationship: Command → BenchSnapshot
+
+```yaml
+source: Command
+target: BenchSnapshot
+verb: validates
+```
+
+### Relationship: Command → Diagnostics
+
+```yaml
+source: Command
+target: Diagnostics
+verb: summarizes
+```
+
+```yaml
+source: Diagnostics
+target: DiagnosticEvent
+verb: retains
+cardinality: 1:N
+```
+
+```yaml
+source: DiagnosticEvent
+target: Failure
+verb: includes
+cardinality: 1:1
+```
+
+```yaml
+source: Diagnostics
+target: DiagnosticReport
+verb: exports
+```
+
+```yaml
+source: file:crates/bench-core/src/lib.rs
+target: BenchSnapshot
+verb: defines
+```
+
+```yaml
+source: file:crates/bench-core/src/lib.rs
+target: MachineState
+verb: defines
+```
+
+```yaml
+source: file:crates/bench-core/src/lib.rs
+target: InstrumentState
+verb: defines
+```
+
+```yaml
+source: file:crates/bench-core/src/lib.rs
+target: BenchSnapshot
+verb: tests
+```
+
+```yaml
+source: file:crates/bench-core/schemas/snapshot.json
+target: BenchSnapshot
+verb: documents
+```
+
+```yaml
+source: file:crates/bench-core/src/diagnostics.rs
+target: Diagnostics
+verb: defines
+```
+
+```yaml
+source: file:crates/bench-core/src/diagnostics.rs
+target: DiagnosticEvent
+verb: defines
+```
+
+```yaml
+source: file:crates/bench-core/src/diagnostics.rs
+target: Failure
+verb: defines
+```
+
+```yaml
+source: file:crates/bench-core/src/diagnostics.rs
+target: DiagnosticReport
+verb: defines
+```
+
+```yaml
+source: file:crates/bench-core/src/diagnostics.rs
+target: DiagnosticReport
+verb: tests
+```
+
+```yaml
+source: file:crates/bench-core/schemas/client-errors.json
+target: Diagnostics
+verb: documents
+```
+
+```yaml
+source: file:crates/bench-cli/src/main.rs
+target: Command
+verb: defines
+```
+
+```yaml
+source: file:crates/bench-cli/schemas/commands.json
+target: Command
+verb: documents
+```
+
+```yaml
+source: file:crates/bench-cli/tests/cli.rs
+target: Command
+verb: tests
+```
+
+```yaml
+source: file:crates/bench-cli/tests/cli.rs
+target: DiagnosticReport
+verb: tests
+```
+
+```yaml
+source: file:experiments/rune/crates/cnc-ui-rune/src/workspace.rs
+target: NativeWorkspace
+verb: defines
+```
+
+```yaml
+source: file:experiments/rune/crates/cnc-ui-rune/src/provider.rs
+target: LocalProvider
+verb: defines
+```
+
+```yaml
+source: file:web/hardware/tabletop.js
+target: HardwareBench
+verb: defines
+```
+
+```yaml
+source: file:experiments/rune/crates/cnc-ui-rune/src/agent_debug.rs
+target: InspectorRequest
+verb: defines
+```
+
+```yaml
+source: file:experiments/rune/schemas/inspector.json
+target: InspectorRequest
+verb: documents
+```
+
+```yaml
+source: file:docs/desktop.md
+target: NativeWorkspace
+verb: documents
+```
+
+```yaml
+source: NativeWorkspace
+target: HardwareBench
+verb: embeds
+```
+
+```yaml
+source: NativeWorkspace
+target: LocalProvider
+verb: uses
+```
+
+```yaml
+source: file:experiments/rune/crates/cnc-ui-rune/src/dotdog.rs
+target: EvidenceMap
+verb: defines
+```
+
+```yaml
+source: file:docs/rea-maps.md
+target: EvidenceMap
+verb: documents
+```
+
+```yaml
+source: NativeWorkspace
+target: EvidenceMap
+verb: inspects
+```
