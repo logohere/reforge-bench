@@ -3,11 +3,11 @@
 A native Rust/Rune workbench with typed state, hardware inspection, local
 diagnostics and one recorded hardware/REA example. The desktop uses a native
 workspace shell, with hardware views running inside the app using embedded
-WebKit. It does not open a browser or require a local server.
+WebKit on macOS and WebView2 on Windows. It does not open a browser or require a local server.
 
 **Status: `0.1.0-alpha.1`, unreleased source preview.** No live acquisition
 adapter, OEM firmware or private firmware-analysis engine is bundled. The
-desktop preview is macOS-only; no public binary release is available.
+desktop preview has macOS and Windows x64 source builds; no public binary release is available.
 
 [Architecture](docs/architecture.md) · [Desktop](docs/desktop.md) ·
 [REA maps](docs/rea-maps.md) · [AI guide](docs/ai.md) · [Contributing](CONTRIBUTING.md)
@@ -31,12 +31,34 @@ locally ad-hoc-signed app, not a notarized distribution.
 See [architecture-specific builds](docs/desktop.md) and the
 [release checklist](docs/publishing.md) before distributing a build.
 
+## Windows app
+
+Build on Windows x64 with Visual Studio C++ Build Tools (Desktop development
+with C++, including the Windows SDK), Rustup's MSVC toolchain, Python 3 and
+Bun 1.3.14 on PATH. Install the
+[Microsoft Edge WebView2 Evergreen Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
+if it is not already installed. From the repository root in PowerShell:
+
+```powershell
+python scripts/package-windows.py
+& ".\dist\Reforge Bench\reforge-bench-desktop.exe"
+```
+
+The packager also creates a Windows x64 ZIP in `dist`. Extract the whole folder;
+the executable requires its adjacent `resources` directory. No Rust, Bun or
+Python installation is needed to run the packaged app. Local packages are unsigned;
+this command does not create an installer or publish a release.
+See [Windows build details](docs/desktop.md#windows) for prerequisites and limits.
+
+## Platform verification
+
 | Platform | Current verification |
 | --- | --- |
 | Apple silicon macOS | Native build, tests and rendered UI checked |
 | Intel macOS | Desktop compile-checked, including developer features; execution not yet verified |
+| Windows x64 | Cross-compile checked; native hosted build and rendered UI checks pending |
 
-CI defines separate macOS architecture jobs. Hosted execution remains unverified;
+CI defines macOS architecture jobs and a Windows x64 build/package/smoke job. Hosted execution remains unverified;
 the table describes local checks, not CI results. The macOS
 bundle declares macOS 13 as its minimum; execution on that minimum is not yet
 qualified.

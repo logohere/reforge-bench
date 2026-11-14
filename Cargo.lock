@@ -3290,6 +3290,7 @@ name = "reforge-bench-desktop"
 version = "0.1.0-alpha.1"
 dependencies = [
  "reforge-rune-ui",
+ "windows-sys 0.59.0",
 ]
 
 [[package]]
@@ -3306,6 +3307,7 @@ dependencies = [
  "serde",
  "serde_json",
  "sha2 0.11.1",
+ "windows-sys 0.59.0",
  "wry",
 ]
 

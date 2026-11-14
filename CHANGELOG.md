@@ -2,6 +2,10 @@
 
 ## 0.1.0-alpha.1 — Unreleased
 
+- Added Windows x64 source builds, embedded WebView2 hardware views, per-user storage and ZIP packaging.
+- Added Windows build/package/UI smoke CI; kept the developer socket inspector macOS-only.
+- Fixed repeated preference saves on Windows and used the platform import shortcut and default browser.
+- Shared desktop resource packaging and fixed Bun availability during CI packaging.
 - Reject pre-existing symlink storage directories and temporary-write collisions.
 - Clarify local macOS source builds without Apple signing credentials.
 - Include frontend dependencies in update checks and dependency audits.

@@ -10,6 +10,7 @@ pub enum Origin {
     #[default]
     Backend,
     Webkit,
+    Webview2,
     Rust,
 }
 

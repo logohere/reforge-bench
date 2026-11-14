@@ -37,9 +37,10 @@ cargo run --locked -p reforge-bench-desktop -- --replay --tree /tmp/reforge-tree
 cargo run --locked -p reforge-bench-desktop -- --replay --snap /tmp/reforge.png --size 1000x760
 ```
 
-Headless replay verifies the native renderer, not WebKit or physical hardware.
+Headless replay verifies the native renderer, not embedded webviews or physical hardware.
 Use [the running-app inspector](desktop.md#inspector) and inspect changed embedded
-views too. Normal builds do not start its socket.
+views too. The socket inspector is macOS-only; normal builds do not start it.
+Windows packaged-app checks use `scripts/check-windows.ps1`.
 
 For live inspection, read `inspect --schema` before sending commands; it works
 without a running app. Start with `inspect snapshot` and `inspect diagnostics`.

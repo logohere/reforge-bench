@@ -19,6 +19,10 @@ CARGO_BUILD_WARNINGS=deny cargo clippy --locked --workspace --all-targets
 RUSTDOCFLAGS="-D warnings" cargo doc --locked --workspace --no-deps
 ```
 
+On Windows, use PowerShell `$env:NAME="value"` syntax for environment variables.
+See [desktop development](docs/desktop.md#windows) for MSVC/WebView2 prerequisites
+and the packaged-app smoke check. CI checks Windows x64 and both macOS architectures.
+
 Use Rustfmt and Clippy, not another formatting framework. Keep Rust APIs readable
 and document units, provenance, failure behavior and authority boundaries. Verify
 behavior before claiming an optimization; do not trade correctness for a smaller

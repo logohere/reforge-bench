@@ -1,7 +1,7 @@
 # Desktop development
 
 The application shell is Rust/Rune. The retained hardware framework uses Three,
-Carbon web components and an embedded WebKit view. Both share the app design
+Carbon web components and an embedded WebKit (macOS) or WebView2 (Windows) view. Both share the app design
 tokens and icons. Packaged resources use an app-owned custom URL scheme; no
 TCP port, browser handoff or private backend is needed.
 
@@ -35,7 +35,52 @@ in `dist`; quit that app before rebuilding. The build receipt records the target
 Cross-compilation does not verify execution on the other architecture. Hardware
 and acquisition support still depends on the user's chosen equipment and tools.
 
+## Windows
+
+The same desktop crate builds for `x86_64-pc-windows-msvc`. Its historical
+`experiments/rune/apps/macos` path is not a platform restriction. Windows ARM64,
+32-bit Windows and GNU-toolchain packages are not currently qualified.
+
+Use Windows 11 x64 with:
+
+- Visual Studio 2022 or newer C++ Build Tools, with **Desktop development with C++**
+  and a Windows SDK. Rustup's Windows installer can help install these tools.
+- Rustup with the `x86_64-pc-windows-msvc` host toolchain. Cargo selects the pinned Rust version.
+- Python 3 and Bun 1.3.14 available as `python` and `bun` on PATH.
+- The [WebView2 Evergreen Runtime](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution).
+  It is a runtime prerequisite, not bundled by the packager.
+
+```powershell
+python scripts/package-windows.py
+& ".\dist\Reforge Bench\reforge-bench-desktop.exe"
+```
+
+This builds the native Rune shell and the existing embedded hardware views,
+then writes `dist/Reforge Bench` and a versioned Windows x64 ZIP. Extract and
+keep the entire folder together. Run it from any working directory; packaged
+resources are resolved beside the executable. Rebuilding replaces the package;
+close the app first. `--debug` uses a debug Rust build. `--agent-debug` enables
+WebView2 developer tools, not the macOS-only socket inspector.
+
+Library imports, preferences and the isolated WebView2 profile live under
+`%LOCALAPPDATA%\dev.reforge.bench`, not beside the executable or in the source
+checkout. Source references open with the Windows default browser, and artifact
+import uses Ctrl+O. Release builds do not open a console window; fatal startup
+errors appear in a native dialog.
+
+Local packages are unsigned and have no installer. Windows may warn before
+running an unsigned app. Code signing, clean-machine runtime qualification and
+an approved release remain separate distribution gates. CI uses Windows Server
+2025 x64; it does not qualify every Windows version or hardware adapter.
+
+The Windows smoke check launches the packaged app outside the checkout, invokes
+the native hardware command through UI Automation, checks 2D/3D resources and the
+in-process API, and captures embedded-view screenshots. Its temporary WebView2
+debugging port is test-only; normal builds do not start a debug endpoint.
+
 ## Inspector
+
+The private Unix-socket inspector is currently macOS-only.
 
 Run against an explicitly enabled developer build:
 

@@ -1033,7 +1033,7 @@ pub fn view(state: &State, cx: &Cx<State>, width: f32) -> El {
             .variant(ButtonVariant::Ghost)
             .help("Open the remaining bench, experiment, equipment and wiring views in the existing local workspace")
             .on_press(|state: &mut State| workspace::open_existing(state,"hardware"))
-            .build(&theme::kit()).h(44.0));
+            .build(&theme::kit()).key("hardware-full-workspace").h(44.0));
     let mut body = col()
         .w_full()
         .gap(16.0)
