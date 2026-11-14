@@ -67,6 +67,7 @@ try {
         }
     }
     $button = Wait-Until 'native Hardware navigation' {
+        $window = [System.Windows.Automation.AutomationElement]::FromHandle($process.MainWindowHandle)
         $condition = [System.Windows.Automation.PropertyCondition]::new(
             [System.Windows.Automation.AutomationElement]::AutomationIdProperty, 'nav-hardware')
         $window.FindFirst([System.Windows.Automation.TreeScope]::Descendants, $condition)
