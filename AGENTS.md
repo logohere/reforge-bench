@@ -1,7 +1,7 @@
 # Working on Reforge Bench
 
 Start with [README](README.md), [architecture](docs/architecture.md) and
-[the AI guide](docs/ai.md). Use a focused branch and PR against `develop`.
+[the AI guide](docs/ai.md). Use a focused branch and PR against `main`.
 Do not merge, publish, change visibility or create a release unless requested.
 
 Preserve the native workspace, hardware views, menus and design tokens. Reuse

@@ -1,6 +1,6 @@
 # Contributing
 
-Use a focused branch and pull request against `develop`. Preserve existing
+Use a focused branch and pull request against `main`. Preserve existing
 behavior and component ownership. Keep user configuration and data separate from
 reusable implementations.
 

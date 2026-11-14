@@ -66,9 +66,9 @@ try {
             [System.Windows.Automation.AutomationElement]::FromHandle($process.MainWindowHandle)
         }
     }
-    $button = Wait-Until 'native hardware workspace command' {
+    $button = Wait-Until 'native Hardware navigation' {
         $condition = [System.Windows.Automation.PropertyCondition]::new(
-            [System.Windows.Automation.AutomationElement]::AutomationIdProperty, 'hardware-full-workspace')
+            [System.Windows.Automation.AutomationElement]::AutomationIdProperty, 'nav-hardware')
         $window.FindFirst([System.Windows.Automation.TreeScope]::Descendants, $condition)
     }
     $button.GetCurrentPattern([System.Windows.Automation.InvokePattern]::Pattern).Invoke()
@@ -102,6 +102,15 @@ try {
         throw 'WebView2 local storage failed'
     }
     Write-Output 'Packaged Windows app: native command, embedded 2D/3D views, local API and storage passed.'
+ } catch {
+    if ($window) {
+        $all = $window.FindAll([System.Windows.Automation.TreeScope]::Descendants, [System.Windows.Automation.Condition]::TrueCondition)
+        for ($i = 0; $i -lt [Math]::Min($all.Count, 100); $i++) {
+            $item = $all.Item($i).Current
+            Write-Output ("UIA: {0} | {1}" -f $item.AutomationId, $item.Name)
+        }
+    }
+    throw
 } finally {
     $socket.Dispose()
     if ($process -and !$process.HasExited) {
