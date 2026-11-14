@@ -1,7 +1,7 @@
 # Preparing a public source release
 
 Publication requires the owner's explicit approval. The MIT-licensed source is
-an alpha preview for local macOS builds, not a supported stable desktop release.
+an alpha preview for local macOS and Windows x64 builds, not a supported stable desktop release.
 
 Source builds do not require an Apple developer account, Developer ID signing
 or notarization. The source preview and a public macOS binary have separate gates.
@@ -9,6 +9,12 @@ Local ad-hoc signing is not Developer ID signing or notarization. Before a publi
 binary release, verify the packaged app, its complete third-party license bundle,
 Developer ID signature and notarization on a clean supported machine. Confirm
 that ordinary builds leave the developer inspector disabled.
+
+Windows source builds require no signing account. Windows packages are unsigned
+folders/ZIPs, not installers. Before a public Windows binary release, verify
+WebView2 availability, runtime dependencies, Authenticode signing and packaged
+resources on a clean supported machine. CI smoke screenshots are not a complete
+clean-machine or hardware qualification.
 
 ## Review gates
 

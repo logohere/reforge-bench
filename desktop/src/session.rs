@@ -4,8 +4,18 @@ use std::{
 };
 
 pub fn project_root() -> Result<PathBuf, Box<dyn Error>> {
+    #[cfg(target_os = "windows")]
+    let root = PathBuf::from(
+        std::env::var_os("LOCALAPPDATA").ok_or("Application data directory unavailable")?,
+    )
+    .join("dev.reforge.bench");
+    #[cfg(not(target_os = "windows"))]
     let home = std::env::var_os("HOME").ok_or("Application data directory unavailable")?;
+    #[cfg(not(target_os = "windows"))]
     let root = PathBuf::from(home).join("Library/Application Support/dev.reforge.bench");
+    if !root.is_absolute() {
+        return Err("Application data directory must be absolute".into());
+    }
     private_directory(&root)?;
     Ok(root)
 }

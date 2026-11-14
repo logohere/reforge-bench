@@ -80,13 +80,14 @@ pub(crate) fn write(path: &Path, bytes: &[u8]) -> std::io::Result<()> {
     let mut file = options.open(&temporary)?;
     file.write_all(bytes)?;
     file.sync_all()?;
+    drop(file);
     std::fs::rename(temporary, path)
 }
 
 pub fn path() -> Option<PathBuf> {
-    std::env::var_os("HOME").map(|home| {
-        PathBuf::from(home).join("Library/Application Support/dev.reforge.bench/preferences.json")
-    })
+    super::backend_session::project_root()
+        .ok()
+        .map(|root| root.join("preferences.json"))
 }
 
 #[cfg(test)]
@@ -109,6 +110,9 @@ mod tests {
         preferences.save(Some(DDCS_SHA), true).unwrap();
         let (_, selection) = Preferences::load(path.clone()).unwrap();
         assert_eq!(selection, (Some(DDCS_SHA.into()), true));
+        preferences.save(Some(DDCS_SHA), false).unwrap();
+        let (_, selection) = Preferences::load(path.clone()).unwrap();
+        assert_eq!(selection, (Some(DDCS_SHA.into()), false));
         assert!(preferences.save(Some("wrong-image"), false).is_err());
         assert_eq!(Preferences::load(path.clone()).unwrap().1, selection);
         #[cfg(unix)]

@@ -1,6 +1,6 @@
 # Contributing
 
-Use a focused branch and pull request against `develop`. Preserve existing
+Use a focused branch and pull request against `main`. Preserve existing
 behavior and component ownership. Keep user configuration and data separate from
 reusable implementations.
 
@@ -18,6 +18,10 @@ cargo test --locked --workspace
 CARGO_BUILD_WARNINGS=deny cargo clippy --locked --workspace --all-targets
 RUSTDOCFLAGS="-D warnings" cargo doc --locked --workspace --no-deps
 ```
+
+On Windows, use PowerShell `$env:NAME="value"` syntax for environment variables.
+See [desktop development](docs/desktop.md#windows) for MSVC/WebView2 prerequisites
+and the packaged-app smoke check. CI checks Windows x64 and both macOS architectures.
 
 Use Rustfmt and Clippy, not another formatting framework. Keep Rust APIs readable
 and document units, provenance, failure behavior and authority boundaries. Verify

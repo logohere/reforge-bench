@@ -86,25 +86,42 @@ pub fn view(state: &State) -> El {
         .min_h(0.0)
 }
 
-#[cfg(not(target_os = "macos"))]
+#[cfg(target_os = "windows")]
+const ORIGIN: &str = "https://reforge.localhost/";
+#[cfg(not(target_os = "windows"))]
+const ORIGIN: &str = "reforge://localhost/";
+
+fn local_url(url: &str) -> bool {
+    url.starts_with(ORIGIN) || url.starts_with(&format!("blob:{ORIGIN}"))
+}
+
+#[cfg(not(any(target_os = "macos", target_os = "windows")))]
 pub fn attach(app: App<State>, _port: u16) -> App<State> {
     app
 }
 
-#[cfg(target_os = "macos")]
+#[cfg(any(target_os = "macos", target_os = "windows"))]
 pub fn attach(app: App<State>, port: u16) -> App<State> {
+    #[cfg(target_os = "macos")]
     use objc2::{MainThreadMarker, MainThreadOnly, rc::Retained};
+    #[cfg(target_os = "macos")]
     use objc2_app_kit::NSView;
     use rune::{AppHandle, Compositor, compose::Frame};
     use std::{cell::RefCell, rc::Rc};
+    #[cfg(target_os = "macos")]
+    use wry::WebViewExtMacOS;
     use wry::{
-        NewWindowResponse, WebView, WebViewBuilder, WebViewExtMacOS,
+        NewWindowResponse, WebView, WebViewBuilder,
         dpi::{LogicalPosition, LogicalSize},
     };
+    #[cfg(target_os = "windows")]
+    use wry::{WebContext, WebViewBuilderExtWindows};
 
     struct Child {
         view: WebView,
+        #[cfg(target_os = "macos")]
         container: Retained<NSView>,
+        #[cfg(target_os = "macos")]
         parent: Retained<NSView>,
         revision: u64,
         reload: u64,
@@ -115,14 +132,14 @@ pub fn attach(app: App<State>, port: u16) -> App<State> {
     }
     struct Host {
         child: Rc<RefCell<Option<Child>>>,
-        #[cfg(feature = "agent-debug")]
+        #[cfg(all(feature = "agent-debug", target_os = "macos"))]
         inspector: Option<super::agent_debug::Inspector>,
     }
     impl Compositor<State> for Host {
         fn render(&mut self, frame: &mut Frame<'_, State>) {
             frame.draw_ui();
             let mut child = self.child.borrow_mut();
-            #[cfg(feature = "agent-debug")]
+            #[cfg(all(feature = "agent-debug", target_os = "macos"))]
             if let Some(inspector) = self.inspector.as_mut() {
                 inspector.poll(
                     frame,
@@ -158,26 +175,38 @@ pub fn attach(app: App<State>, port: u16) -> App<State> {
                         child.stop = state.ui.embedded.stop;
                     }
                     if child.bounds != bounds {
-                        let mut rect = child.container.frame();
-                        rect.origin.x = bounds[0] as f64;
-                        rect.origin.y = if child.parent.isFlipped() {
-                            bounds[1] as f64
-                        } else {
-                            child.parent.bounds().size.height - bounds[1] as f64 - bounds[3] as f64
-                        };
-                        rect.size.width = bounds[2] as f64;
-                        rect.size.height = bounds[3] as f64;
-                        child.container.setFrame(rect);
-                        #[cfg(any(debug_assertions, feature = "agent-debug"))]
-                        let inspector_open = child.view.is_devtools_open();
-                        #[cfg(not(any(debug_assertions, feature = "agent-debug")))]
-                        let inspector_open = false;
-                        if !inspector_open {
-                            child.view.set_bounds(wry::Rect {
-                                position: LogicalPosition::new(0.0, 0.0).into(),
-                                size: LogicalSize::new(bounds[2] as f64, bounds[3] as f64).into(),
-                            })?;
+                        #[cfg(target_os = "macos")]
+                        {
+                            let mut rect = child.container.frame();
+                            rect.origin.x = bounds[0] as f64;
+                            rect.origin.y = if child.parent.isFlipped() {
+                                bounds[1] as f64
+                            } else {
+                                child.parent.bounds().size.height
+                                    - bounds[1] as f64
+                                    - bounds[3] as f64
+                            };
+                            rect.size.width = bounds[2] as f64;
+                            rect.size.height = bounds[3] as f64;
+                            child.container.setFrame(rect);
+                            #[cfg(any(debug_assertions, feature = "agent-debug"))]
+                            let inspector_open = child.view.is_devtools_open();
+                            #[cfg(not(any(debug_assertions, feature = "agent-debug")))]
+                            let inspector_open = false;
+                            if !inspector_open {
+                                child.view.set_bounds(wry::Rect {
+                                    position: LogicalPosition::new(0.0, 0.0).into(),
+                                    size: LogicalSize::new(bounds[2] as f64, bounds[3] as f64)
+                                        .into(),
+                                })?;
+                            }
                         }
+                        #[cfg(target_os = "windows")]
+                        child.view.set_bounds(wry::Rect {
+                            position: LogicalPosition::new(bounds[0] as f64, bounds[1] as f64)
+                                .into(),
+                            size: LogicalSize::new(bounds[2] as f64, bounds[3] as f64).into(),
+                        })?;
                         child.bounds = bounds;
                     }
                     if child.revision != state.ui.embedded.revision
@@ -189,7 +218,9 @@ pub fn attach(app: App<State>, port: u16) -> App<State> {
                                 "window.__reaPendingWorkspace={0};if(document.body?.dataset.router==='ready'){{window.dispatchEvent(new CustomEvent('rea-workspace-open',{{detail:{0}}}))}}else{{location.assign({0})}}",
                                 serde_json::to_string(path).expect("route JSON")))?;
                         } else {
-                            child.view.load_url(&format!("reforge://localhost{path}"))?;
+                            child
+                                .view
+                                .load_url(&format!("{}{path}", ORIGIN.trim_end_matches('/')))?;
                             child.loaded = true;
                         }
                         child.revision = state.ui.embedded.revision;
@@ -200,6 +231,7 @@ pub fn attach(app: App<State>, port: u16) -> App<State> {
                 if visible != child.visible {
                     child.view.evaluate_script(&format!(
                         "window.dispatchEvent(new CustomEvent('rea-workspace-visible',{{detail:{visible}}}))"))?;
+                    #[cfg(target_os = "macos")]
                     child.container.setHidden(!visible);
                     child.view.set_visible(visible)?;
                     if visible {
@@ -229,12 +261,24 @@ pub fn attach(app: App<State>, port: u16) -> App<State> {
         slot: &Rc<RefCell<Option<Child>>>,
     ) -> Result<(), String> {
         let failed = handle.clone();
-        let origin = "reforge://localhost/".to_owned();
         let inspector_enabled = super::backend_session::build_identity()["agent_debug"] == true
             || cfg!(debug_assertions) && std::env::var("REFORGE_AGENT_DEBUG").as_deref() == Ok("1");
+        #[cfg(target_os = "windows")]
+        let mut context = {
+            let data = super::backend_session::project_root()
+                .map_err(|error| error.to_string())?
+                .join("webview");
+            super::backend_session::private_directory(&data).map_err(|error| error.to_string())?;
+            WebContext::new(Some(data))
+        };
         let view = window
             .with_raw_handle(|raw| {
-                WebViewBuilder::new()
+                #[cfg(target_os = "macos")]
+                let builder = WebViewBuilder::new();
+                #[cfg(target_os = "windows")]
+                let builder =
+                    WebViewBuilder::new_with_web_context(&mut context).with_https_scheme(true);
+                builder
                     .with_custom_protocol("reforge".into(), |_id, request| {
                         let path = request
                             .uri()
@@ -323,8 +367,7 @@ pub fn attach(app: App<State>, port: u16) -> App<State> {
                         };
                         let uri = request.uri().to_string();
                         handle.update(move |state, _| {
-                            let origin = "reforge://localhost/".to_owned();
-                            if !uri.starts_with(&origin) {
+                            if !uri.starts_with(ORIGIN) {
                                 return;
                             }
                             if value["kind"] == "client-error" {
@@ -367,8 +410,7 @@ pub fn attach(app: App<State>, port: u16) -> App<State> {
                             return true;
                         }
                         // Only the packaged local host owns application navigation.
-                        let allowed =
-                            url.starts_with(&origin) || url.starts_with(&format!("blob:{origin}"));
+                        let allowed = local_url(&url);
                         if !allowed {
                             failed.update(move |state, _| {
                                 state.ui.notice =
@@ -381,18 +423,24 @@ pub fn attach(app: App<State>, port: u16) -> App<State> {
                     .build_as_child(&raw)
             })?
             .map_err(|error| error.to_string())?;
-        let mtm = MainThreadMarker::new().ok_or("Workspace must attach on the main thread")?;
-        let webview = view.webview();
-        let parent =
-            unsafe { webview.superview() }.ok_or("Workspace parent view is unavailable")?;
-        let container = NSView::initWithFrame(NSView::alloc(mtm), parent.bounds());
-        parent.addSubview(&container);
-        webview.removeFromSuperview();
-        container.addSubview(&webview);
-        container.setHidden(true);
+        #[cfg(target_os = "macos")]
+        let (container, parent) = {
+            let mtm = MainThreadMarker::new().ok_or("Workspace must attach on the main thread")?;
+            let webview = view.webview();
+            let parent =
+                unsafe { webview.superview() }.ok_or("Workspace parent view is unavailable")?;
+            let container = NSView::initWithFrame(NSView::alloc(mtm), parent.bounds());
+            parent.addSubview(&container);
+            webview.removeFromSuperview();
+            container.addSubview(&webview);
+            container.setHidden(true);
+            (container, parent)
+        };
         *slot.borrow_mut() = Some(Child {
             view,
+            #[cfg(target_os = "macos")]
             container,
+            #[cfg(target_os = "macos")]
             parent,
             revision: 0,
             reload: 0,
@@ -406,7 +454,7 @@ pub fn attach(app: App<State>, port: u16) -> App<State> {
 
     let slot = Rc::new(RefCell::new(None));
     let handle = app.handle();
-    #[cfg(feature = "agent-debug")]
+    #[cfg(all(feature = "agent-debug", target_os = "macos"))]
     let inspector = match super::agent_debug::Inspector::start(handle.clone()) {
         Ok(inspector) => inspector,
         Err(error) => {
@@ -418,7 +466,7 @@ pub fn attach(app: App<State>, port: u16) -> App<State> {
     };
     let host = Host {
         child: slot.clone(),
-        #[cfg(feature = "agent-debug")]
+        #[cfg(all(feature = "agent-debug", target_os = "macos"))]
         inspector,
     };
     app.compositor(host).on_window(move |window| {
@@ -450,6 +498,22 @@ mod tests {
             open(&mut state, bad);
             assert_eq!(state.ui.embedded.path, "/lab/?system=haas-lathe");
             assert_eq!(state.ui.embedded.revision, 1);
+        }
+    }
+
+    #[test]
+    fn embedded_origin_excludes_foreign_hosts_and_schemes() {
+        assert!(local_url(&format!("{ORIGIN}hardware/")));
+        assert!(local_url(&format!("blob:{ORIGIN}local-download")));
+        for url in [
+            "https://reforge.localhost.evil.invalid/hardware/",
+            "https://reforge.localhost@evil.invalid/hardware/",
+            "http://reforge.localhost/hardware/",
+            "reforge://localhost.evil.invalid/hardware/",
+            "file:///hardware/",
+            "javascript:alert(1)",
+        ] {
+            assert!(!local_url(url));
         }
     }
 }

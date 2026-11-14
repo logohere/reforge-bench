@@ -1,12 +1,12 @@
 # Working on Reforge Bench
 
 Start with [README](README.md), [architecture](docs/architecture.md) and
-[the AI guide](docs/ai.md). Use a focused branch and PR against `develop`.
+[the AI guide](docs/ai.md). Use a focused branch and PR against `main`.
 Do not merge, publish, change visibility or create a release unless requested.
 
 Preserve the native workspace, hardware views, menus and design tokens. Reuse
 existing components. Rust owns the shell, imports, validation, diagnostics and
-graph inspection; embedded WebKit hosts JavaScript hardware visualizations.
+graph inspection; embedded WebKit (macOS) or WebView2 (Windows) hosts JavaScript hardware visualizations.
 Do not describe this as an all-Rust renderer.
 
 Dotdog is for REA evidence mapping, relationships and traces. The repo map is

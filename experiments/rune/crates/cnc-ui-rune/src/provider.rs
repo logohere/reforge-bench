@@ -281,6 +281,9 @@ pub fn asset(path: &str) -> Result<Vec<u8>, String> {
         return Err("Resource not included".into());
     }
     let packaged = std::env::current_exe().ok().and_then(|exe| {
+        #[cfg(target_os = "windows")]
+        return exe.parent().map(|root| root.join("resources/web"));
+        #[cfg(not(target_os = "windows"))]
         exe.parent()?
             .parent()
             .map(|root| root.join("Resources/web"))

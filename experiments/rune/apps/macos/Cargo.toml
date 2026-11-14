@@ -13,5 +13,8 @@ agent-debug = ["rea-rune-ui/agent-debug"]
 [dependencies]
 rea-rune-ui.workspace = true
 
+[target.'cfg(target_os = "windows")'.dependencies]
+windows-sys = { version = "0.59", features = ["Win32_UI_WindowsAndMessaging"] }
+
 [lints]
 workspace = true

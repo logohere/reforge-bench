@@ -43,7 +43,8 @@ pub fn parse(message: &str) -> Option<Value> {
         String::new()
     };
     Some(json!({
-        "origin": "webkit", "operation": value["phase"], "path": path(&value, "path"),
+        "origin": if cfg!(target_os = "windows") { "webview2" } else { "webkit" },
+        "operation": value["phase"], "path": path(&value, "path"),
         "action": action, "detail": text(&value, "message", 320),
         "source": path(&value, "source"), "line": value["line"].as_u64().unwrap_or(0),
         "column": value["column"].as_u64().unwrap_or(0), "stack": text(&value, "stack", 1600),

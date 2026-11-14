@@ -1,3 +1,4 @@
+#[cfg(not(target_os = "windows"))]
 use std::process::Command;
 
 use rune::{App, Cx, El, Icon, Image, ImageCache, MenuItem, ScrollSpec, TextEdit, col, el, row};
@@ -117,12 +118,50 @@ pub fn open_url(state: &mut State, url: &str) {
         return;
     }
 
-    match Command::new("/usr/bin/open").arg(url).spawn() {
-        Ok(_) => state.ui.notice = Some("Opened the source reference.".into()),
+    match launch_url(url) {
+        Ok(()) => state.ui.notice = Some("Opened the source reference.".into()),
         Err(error) => {
             state.ui.notice = Some(format!("Could not open the source reference: {error}"))
         }
     }
+}
+
+#[cfg(target_os = "windows")]
+fn launch_url(url: &str) -> Result<(), String> {
+    use windows_sys::Win32::UI::{Shell::ShellExecuteW, WindowsAndMessaging::SW_SHOWNORMAL};
+    let url: Vec<u16> = url.encode_utf16().chain(Some(0)).collect();
+    // SAFETY: the URL is a validated, NUL-terminated HTTP(S) string; no shell command is built.
+    let result = unsafe {
+        ShellExecuteW(
+            std::ptr::null_mut(),
+            std::ptr::null(),
+            url.as_ptr(),
+            std::ptr::null(),
+            std::ptr::null(),
+            SW_SHOWNORMAL,
+        )
+    };
+    if result as isize > 32 {
+        Ok(())
+    } else {
+        Err(format!(
+            "Windows could not open the URL (code {})",
+            result as isize
+        ))
+    }
+}
+
+#[cfg(not(target_os = "windows"))]
+fn launch_url(url: &str) -> Result<(), String> {
+    Command::new(if cfg!(target_os = "macos") {
+        "/usr/bin/open"
+    } else {
+        "xdg-open"
+    })
+    .arg(url)
+    .spawn()
+    .map(|_| ())
+    .map_err(|error| error.to_string())
 }
 
 pub fn open_path(state: &mut State, path: &str) {
@@ -134,7 +173,7 @@ pub fn menus(mut app: App<State>) -> App<State> {
         MenuItem::new("Import artifact…", library::choose_file)
             .id("file-open-firmware")
             .menu("File")
-            .key_equivalent("cmd+o".parse().unwrap()),
+            .key_equivalent("mod+o".parse().unwrap()),
         MenuItem::new("Artifact library", |state: &mut State, _| {
             state.page = Page::Library
         })
