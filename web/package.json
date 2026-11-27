@@ -10,7 +10,7 @@
     "test": "bun test"
   },
   "dependencies": {
-    "@carbon/web-components": "2.67.0",
+    "@carbon/web-components": "2.68.0",
     "@lezer/cpp": "1.1.6",
     "@lezer/highlight": "1.2.5",
     "@noble/hashes": "2.4.0",
